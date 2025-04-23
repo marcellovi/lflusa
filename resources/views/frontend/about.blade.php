@@ -1,0 +1,2 @@
+
+{{ trans('messages.dashboard') }}

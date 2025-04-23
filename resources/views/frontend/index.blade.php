@@ -51,7 +51,8 @@
                             <img src="{{ asset('assets/images/icons/hands.png') }}"
                                  class="featured-block-image img-fluid" alt="">
 
-                            <p class="featured-block-text">Become a <strong>volunteer</strong></p>
+
+                            <p class="featured-block-text">Become a <strong>volunteer {{ trans('messages.users') }}</strong></p>
                         </a>
                     </div>
                 </div>
@@ -62,7 +63,7 @@
                             <img src="{{ asset('assets/images/icons/heart.png') }}"
                                  class="featured-block-image img-fluid" alt="">
 
-                            <p class="featured-block-text"><strong>Events </strong> of Devotion</p>
+                            <p class="featured-block-text"><strong>Events </strong> of Devotion - Locale {{ config('app.locale') }}</p>
                         </a>
                     </div>
                 </div>

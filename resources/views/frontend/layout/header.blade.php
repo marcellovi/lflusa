@@ -19,6 +19,7 @@
                 </p>
             </div>
 
+
             <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
                 <ul class="social-icon">
 
@@ -37,6 +38,25 @@
                     <li class="social-icon-item">
                         <a href="#" class="social-icon-link bi-whatsapp"></a>
                     </li>
+
+                    @php $locale = session()->get('locale'); @endphp
+                    @switch($locale)
+                        @case('en')
+                            <li class="social-icon-item">
+                                <a href="lang/br" title="Portuguese" ><img src="{{asset('assets/images/icons/flags/br.png')}}" width="35px"></a>
+                            </li>
+                            @break
+                        @case('br')
+                            <li class="social-icon-item">
+                                <a href="lang/en" title="English" ><img src="{{asset('assets/images/icons/flags/en.png')}}" width="35px"></a>
+                            </li>
+                            @break
+                        @default
+                            <li class="social-icon-item">
+                                <a href="lang/en" title="English" ><img src="{{asset('assets/images/icons/flags/en.png')}}" width="35px"></a>
+                            </li>
+                    @endswitch
+
                 </ul>
             </div>
 

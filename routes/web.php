@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +19,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('frontend/index');
 });
+
+
+Route::get('/about', function () {
+    return view('frontend/about');
+});
+
+Route::get('lang/{locale}', [LocalizationController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
