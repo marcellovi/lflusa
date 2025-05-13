@@ -45,7 +45,7 @@
                     24814 Kuykendahl Rd Ste 140, Tomball - TX
                 </p>
 
-                <a href="https://maps.app.goo.gl/7sLZRnBmun1tfJRAA" target="_blank" class="custom-btn btn mt-3">Get Direction</a>
+                <a href="https://maps.app.goo.gl/bhjzn9TTEt8nVqRt9" target="_blank" class="custom-btn btn mt-3">Get Direction</a>
             </div>
         </div>
     </div>
