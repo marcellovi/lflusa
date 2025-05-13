@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,16 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/lang/{lang}', [LocalizationController::class, 'index']);
+
 Route::get('/', function () {
     return view('frontend/index');
 });
 
-
-Route::get('/about', function () {
-    return view('frontend/about');
+Route::get('/soon', function () {
+    return view('frontend/soon');
 });
 
-Route::get('lang/{locale}', [LocalizationController::class, 'index']);
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

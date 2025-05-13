@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-light shadow-lg">
     <div class="container">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="/">
             <img src="{{ asset('assets/images/logo-lfl.png') }}" class="logo img-fluid" alt="Frei Luiz">
             <span>
                     Lar Frei Luiz - USA
@@ -16,7 +16,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="index.php">Home</a>
+                    <a class="nav-link click-scroll" href="/">Home</a>
                 </li>
 
                 <li class="nav-item dropdown">
