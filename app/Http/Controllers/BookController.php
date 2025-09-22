@@ -300,7 +300,6 @@ class BookController extends Controller
 
         }catch (\Exception $exception){
             Log::error('Error '.$exception->getMessage());
-            Log::info();
            die($exception->getMessage());
         }
         return view('pages._frontend.library', compact('books','languages','publishers','authors','searched_languages','searched_publishers','searched_authors','search_box'));
