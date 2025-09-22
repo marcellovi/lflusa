@@ -24,4 +24,19 @@
     "photo-gallery" => "Galeria de Fotos",
     "non-profit-organization" => "Organização sem fins lucrativos",
     "lectures" => "Palestras",
+
+    // LANGUAGES //
+    "portuguese" => "Português",
+    "english" => "Inglês",
+    "spanish" => "Espanhol",
+    "french" => "Francês",
+    "german" => "Alemão",
+    "italian" => "Italiano",
+    "arabic" => "Árabe",
+
+    // LIBRARY TYPES //
+    'study' => 'Estudos',
+    'rent' => 'Emprestimo',
+    'sell' => 'Venda',
+
 ];

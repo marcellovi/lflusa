@@ -12,3 +12,22 @@
 
 <script src="{{ asset('assets/js/main/counter.js') }}"></script>
 <script src="{{ asset('assets/js/main/custom.js') }}"></script>
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+
+
+<script>
+    function closeDiv() {
+        const myDiv = document.getElementById('toastArea');
+        myDiv.style.display = 'none';
+    }
+
+    $(document).ready(function() {
+        // Wait 5000ms (5 seconds), then call fadeOut()
+        $('#toastArea').delay(5000).fadeOut();
+
+        // If you want an instant hide after the delay, you must still provide a duration
+        // $('#timed-message-animated').delay(5000).hide(1);
+    });
+</script>

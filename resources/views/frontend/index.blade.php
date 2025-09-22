@@ -93,7 +93,6 @@
             </div>
         </div>
     </section>
-
     <section class="section-padding section-bg" id="section_2">
         <div class="container">
             <div class="row">
@@ -142,8 +141,6 @@
             </div>
         </div>
     </section>
-
-
     <section class="news-section section-padding" id="section_5">
         <div class="container">
             <div class="row">
@@ -281,8 +278,6 @@
             </div>
         </div>
     </section>
-
-
     <section class="cta-section section-padding section-bg">
         <div class="container">
             <div class="row justify-content-center align-items-center">
@@ -301,10 +296,7 @@
         </div>
     </section>
 
-
     <!--   include "volunteer.php"; ?> -->
-
-
     <section class="contact-section section-padding">
         <div class="container">
             <div class="row">
