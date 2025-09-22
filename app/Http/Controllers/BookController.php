@@ -315,7 +315,7 @@ class BookController extends Controller
                 ->toRawSql();
             Log::error('SQL : '.$books_sql);
 
-            //die($exception->getMessage());
+            die($exception->getMessage());
         }
         return view('pages._frontend.library', compact('books','languages','publishers','authors','searched_languages','searched_publishers','searched_authors','search_box'));
     }
