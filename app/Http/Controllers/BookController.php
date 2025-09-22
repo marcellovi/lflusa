@@ -259,13 +259,11 @@ class BookController extends Controller
                 ->join("publishers", "books.publisher_id", "=", "publishers.id")
                 ->join('languages', 'books.language_id', '=', "languages.id")
                 //->join('spirits', 'books.spirit_id', '=', "spirits.id")
-                ->where('type','!=','messages.study')
+                ->whereIn('type',['messages.sell','messages.rent'])
                 ->whereBetween('price',[$request->get('price_range_min'),$request->get('price_range_max')])
                 ->orderBy('title')
                 ->groupBy('books.id','book_id')
-                ->tosql();
-            dd($books);
-                //->paginate(6);// dd($books );
+                ->paginate(6);
 
 
 //            $books = DB::table("books")
