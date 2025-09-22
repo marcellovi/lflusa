@@ -300,7 +300,21 @@ class BookController extends Controller
 
         }catch (\Exception $exception){
             Log::error('Error '.$exception->getMessage());
-           die($exception->getMessage());
+            $books_sql = $books->select('books.id as book_id','title','type','edition','price','copies','condition',
+                'cover_image','languages.name as language','publishers.name as publisher',
+                DB::raw("GROUP_CONCAT(authors.name ORDER BY authors.name SEPARATOR ', ')  as author"))
+                ->join('books_authors', 'books.id', '=', 'books_authors.book_id')
+                ->join("authors", "books_authors.author_id", "=", "authors.id")
+                ->join("publishers", "books.publisher_id", "=", "publishers.id")
+                ->join('languages', 'books.language_id', '=', "languages.id")
+                //->join('spirits', 'books.spirit_id', '=', "spirits.id")
+                //->whereIn('type',['messages.sell','messages.rent'])
+                ->whereBetween('price',[$request->get('price_range_min'),$request->get('price_range_max')])
+                ->orderBy('title')
+                ->groupBy('books.id','book_id')
+                ->toRawSql();
+            Log::error('SQL : '.$books_sql);
+            die($exception->getMessage());
         }
         return view('pages._frontend.library', compact('books','languages','publishers','authors','searched_languages','searched_publishers','searched_authors','search_box'));
     }
