@@ -262,8 +262,10 @@ class BookController extends Controller
                 ->where('type','!=','messages.study')
                 ->whereBetween('price',[$request->get('price_range_min'),$request->get('price_range_max')])
                 ->orderBy('title')
-                ->groupBy('books.id','book_id','title')
-                ->paginate(6);// dd($books );
+                ->groupBy('books.id','book_id')
+                ->tosql();
+            dd($books);
+                //->paginate(6);// dd($books );
 
 
 //            $books = DB::table("books")
