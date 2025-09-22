@@ -312,9 +312,10 @@ class BookController extends Controller
                 ->whereBetween('price',[$request->get('price_range_min'),$request->get('price_range_max')])
                 ->orderBy('title')
                 ->groupBy('books.id','book_id')
-                ->toRawSql();
+                ->toSql();
             Log::error('SQL : '.$books_sql);
-            die($exception->getMessage());
+            dd('error');
+            //die($exception->getMessage());
         }
         return view('pages._frontend.library', compact('books','languages','publishers','authors','searched_languages','searched_publishers','searched_authors','search_box'));
     }
