@@ -9,6 +9,7 @@ use App\Models\Publisher;
 use App\Models\Spirit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 class BookController extends Controller
@@ -202,6 +203,8 @@ class BookController extends Controller
     }
     public function list(Request $request)
     {
+        Log::info('This is the list.');
+
         $books = Book::query();
         $searched_languages = [];
         $searched_publishers = [];
@@ -259,8 +262,9 @@ class BookController extends Controller
                 ->where('type','!=','messages.study')
                 ->whereBetween('price',[$request->get('price_range_min'),$request->get('price_range_max')])
                 ->orderBy('title')
-                ->groupBy('books.id','book_id')
+                ->groupBy('books.id','book_id','title')
                 ->paginate(6);// dd($books );
+
 
 //            $books = DB::table("books")
 //                ->select('books.id as book_id','title','type','edition','price','copies','condition','status',
@@ -295,11 +299,13 @@ class BookController extends Controller
             // $spirits = Spirit::select('id','name')->orderby('name')->get();
 
         }catch (\Exception $exception){
+            Log::error('Error '.$exception->getMessage());
+            Log::info();
            die($exception->getMessage());
         }
         return view('pages._frontend.library', compact('books','languages','publishers','authors','searched_languages','searched_publishers','searched_authors','search_box'));
     }
-    
+
 }
 
 
