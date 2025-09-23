@@ -251,6 +251,7 @@ class BookController extends Controller
         }
 
         try{
+            Log::info('This is the TRY.');
             $books = $books->select('books.id as book_id','title','type','edition','price','copies','condition',
                 'cover_image','languages.name as language','publishers.name as publisher',
                 DB::raw("GROUP_CONCAT(authors.name ORDER BY authors.name SEPARATOR ', ')  as author"))
@@ -259,12 +260,13 @@ class BookController extends Controller
                 ->join("publishers", "books.publisher_id", "=", "publishers.id")
                 ->join('languages', 'books.language_id', '=', "languages.id")
                 //->join('spirits', 'books.spirit_id', '=', "spirits.id")
-                //->whereIn('type',['messages.sell','messages.rent'])
+                ->whereIn('type',['messages.sell','messages.rent'])
                 ->whereBetween('price',[$request->get('price_range_min'),$request->get('price_range_max')])
                 ->orderBy('title')
-                ->groupBy('books.id','book_id')
+                ->groupBy('books.id','book_id','title','type','edition','price','copies','condition',
+                'cover_image','languages.name as language','publishers.name as publisher',)
                 ->paginate(6);
-
+            Log::info('This is the BOOKS.');
 
 //            $books = DB::table("books")
 //                ->select('books.id as book_id','title','type','edition','price','copies','condition','status',
@@ -280,14 +282,14 @@ class BookController extends Controller
                 ->groupBy('languages.id','name')
                 ->orderby('name')
                 ->get();
-
+            Log::info('This is the LANGUAGES.');
             $publishers = Publisher::select(DB::raw('publishers.id,name,sum(books.copies) as qtd'))
                 ->leftjoin('books', 'books.publisher_id', '=', "publishers.id")
                 ->where('type','!=','messages.study')
                 ->groupBy('publishers.id','name')
                 ->orderby('name')
                 ->get();
-
+            Log::info('This is the PUBLISHERS.');
             $authors = Author::select(DB::raw('authors.id,name,sum(books.copies) as qtd'))
                 ->join('books_authors', 'author_id', '=', 'authors.id')
                 ->join('books', 'books.id', '=', 'books_authors.book_id')
@@ -295,7 +297,7 @@ class BookController extends Controller
                 ->groupBy('authors.id','name')
                 ->orderby('name')
                 ->get();
-
+            Log::info('This is the AUTHORS.');
             // $spirits = Spirit::select('id','name')->orderby('name')->get();
 
         }catch (\Exception $exception){
@@ -311,12 +313,14 @@ class BookController extends Controller
                 //->whereIn('type',['messages.sell','messages.rent'])
                 ->whereBetween('price',[$request->get('price_range_min'),$request->get('price_range_max')])
                 ->orderBy('title')
-                ->groupBy('books.id','book_id')
+                ->groupBy('books.id','book_id','title','type','edition','price','copies','condition',
+                    'cover_image','languages.name as language','publishers.name as publisher',)
                 ->toRawSql();
             Log::error('SQL : '.$books_sql);
 
             die($exception->getMessage());
         }
+        Log::info('This is the END.');
         return view('pages._frontend.library', compact('books','languages','publishers','authors','searched_languages','searched_publishers','searched_authors','search_box'));
     }
 
