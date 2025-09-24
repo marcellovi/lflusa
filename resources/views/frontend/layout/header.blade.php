@@ -24,7 +24,7 @@
                 <ul class="social-icon">
 
                     <li class="social-icon-item">
-                        <a href="#" class="social-icon-link bi-facebook"></a>
+                        <a href="https://www.facebook.com/lardefreiluizusa" class="social-icon-link bi-facebook" target="_blank"></a>
                     </li>
 
                     <li class="social-icon-item">
@@ -32,7 +32,7 @@
                     </li>
 
                     <li class="social-icon-item">
-                        <a href="#" class="social-icon-link bi-youtube"></a>
+                        <a href="https://www.youtube.com/@ScienceSpiritualityConnection" class="social-icon-link bi-youtube" target="_blank"></a>
                     </li>
 
                     <li class="social-icon-item">
