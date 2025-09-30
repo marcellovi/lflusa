@@ -9,7 +9,7 @@
             <div class="row">
 
                 <div class="col-lg-12 col-12">
-                    <!-- <h1 class="text-white">{{ trans('messages.menu.aboutus') }}</h1> -->
+                    <!-- <h1 class="text-white">{{ trans('messages.title') }}</h1> -->
                 </div>
 
             </div>
@@ -19,13 +19,13 @@
             <div class="row">
                 <div class="col-lg col-12">
                     <div class="custom-text-box" style="background: #e5c999">
-                        <h2 class="mb-2">About us:</h2>
+                        <h2 class="mb-2">{{ trans('messages.about_title') }}:</h2>
                         <p class="mb-3" style="color: white;font-weight: 600px"><b>
-                            O LFL USA foi inaugurado em fevereiro de 2025 em Houston, TX inspirado? no LFL Sobre o LFL | Lar de Frei Luiz com a missão de expandir o conhecimento do espiritismo nos Estados Unidos e praticar a caridade em suas mais variadas formas.        </b>                </p>
-                        <h2 class="mb-2">Mission:</h2>
+                                {{ trans('messages.about_title_text') }}</b></p>
+                        <h2 class="mb-2">{{ trans('messages.aboutus_mission_title') }}:</h2>
                         <p class="mb-3" style="color: white">
-                            LFL-USA is a non-profit organization dedicated to promoting charity through different means such as supporting adults and children in need, the elderly lacking access to a decent living, the sick, the poor and those with addictions or depression.                         </p>
-                        <h2 class="mb-2">Activities and Programs:</h2>
+                            {{ trans('messages.aboutus_mission_title_text') }}</p>
+                        <h2 class="mb-2">{{ trans('messages.aboutus_activities_programs_title') }}:</h2>
                         <p class="mb-0">
                             In the greater Houston area but not limited to and with the hard work and support from all volunteers and friends, LFL-USA will strive to become in the near future an organization with all infrastructure capable of providing means to help the ones in need: We hold Public Meetings, Lectures, Seminars, and Conferences to discuss Christian teachings; promote book studies envisioning improvement on moral and spiritual values. LFL-USA holds free workshops and art classes on Music, Arts, Culinary, creating a welcoming, friendly, and safe environment in order to provide counseling for (but not limited to) poor people, addictive, and depressed people. LFL-USA also aims to hold free workshops on Meditation and Yoga to support wellbeing and good spiritual health.
                             <br><br>

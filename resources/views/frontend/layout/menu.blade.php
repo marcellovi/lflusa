@@ -20,7 +20,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/about">{{ 'About Us' }}</a>
+                    <a class="nav-link" href="/about">{{ trans('messages.about') }}</a>
                 </li>
 
 {{--                <li class="nav-item dropdown">--}}
@@ -41,7 +41,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/soon">{{ 'Calendar' }}</a>
+                    <a class="nav-link" href="/soon">{{ trans('messages.our-calendar') }}</a>
                 </li>
 
                 <!--
@@ -78,7 +78,7 @@
                     <a class="nav-link click-scroll" href="#section_6">{{ trans('messages.contact') }}</a>
                 </li> -->
                 <li class="nav-item ms-3">
-                    <a class="nav-link click-scroll" href="#" data-bs-toggle="modal" data-bs-target="#input-modal" data-bs-whatever="@mdo">{{ 'Caixa de Preçes' }}</a>
+                    <a class="nav-link click-scroll" href="#" data-bs-toggle="modal" data-bs-target="#input-modal" data-bs-whatever="@mdo">{{ trans('messages.prayer_box') }}</a>
                 </li>
                 <li class="nav-item ms-3">
                     <a class="nav-link custom-btn custom-border-btn btn" href="/soon">{{ trans('messages.donate') }}</a>

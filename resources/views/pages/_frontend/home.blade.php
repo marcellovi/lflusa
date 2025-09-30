@@ -8,7 +8,7 @@
             <div class="row">
 
                 <div class="col-lg-10 col-12 text-center mx-auto">
-                    <h2 class="mb-5">Welcome to Lar Frei Luiz USA</h2>
+                    <h2 class="mb-5"{{ trans('messages.welcome') }}</h2>
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
@@ -70,13 +70,11 @@
 
                 <div class="col-lg-6 col-12">
                     <div class="custom-text-box">
-                        <h2 class="mb-2">Welcome to LFL-USA</h2>
+                        <h2 class="mb-2">{{ trans('messages.welcome_box_1_title') }}</h2>
 
-                        <h5 class="mb-3">Frei Luiz Charity, Non-Profit Organization</h5>
+                        <h5 class="mb-3">{{ trans('messages.welcome_box_1_subtitle') }}</h5>
 
-                        <p class="mb-0">We are a welcoming community that embraces individuals from all backgrounds who
-                            are interested in exploring the teachings of Spiritism and applying them in their daily
-                            lives.</p>
+                        <p class="mb-0">{{ trans('messages.welcome_box_1_text') }}</p>
                     </div>
 
                     <div class="row">
@@ -112,7 +110,7 @@
             <div class="row">
 
                 <div class="col-lg-12 col-12 mb-5">
-                    <h2>LFL Future Events</h2>
+                    <h2>{{ trans('messages.home_future_events') }}</h2>
                 </div>
 
                 <div class="col-lg-7 col-12">
@@ -177,7 +175,7 @@
 {{--                        </button>--}}
 {{--                    </form>--}}
 
-                    <h5 class="mt-5 mb-3">More Events</h5>
+                    <h5 class="mt-5 mb-3">{{ trans('messages.home_more_events') }}</h5>
 
                     <div class="news-block news-block-two-col d-flex mt-4">
                         <div class="news-block-two-col-image-wrap">
@@ -271,8 +269,8 @@
 
                 <div class="col-lg-5 col-12 ms-auto">
 {{--                    <h2 class="mb-0">Make an impact. <br> Save lives.</h2>--}}
-                    <h2 class="mb-0">Join Our Community</h2>
-                    <h3 class="mb-0"> Become a Volunteer</h3>
+                    <h2 class="mb-0">{{ trans('messages.home_join_community') }}</h2>
+                    <h3 class="mb-0">{{ trans('messages.become_volunteer') }}</h3>
                 </div>
 
                 <div class="col-lg-5 col-12">
@@ -293,7 +291,7 @@
 
                 <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
                     <div class="contact-info-wrap">
-                        <h2>Get in touch</h2>
+                        <h2>{{ trans('messages.get_in_touch') }}</h2>
                         <hr>
 
 {{--                        <div class="contact-image-wrap d-flex flex-wrap">--}}
@@ -307,7 +305,7 @@
 {{--                        </div>--}}
 
                         <div class="contact-info">
-                            <h5 class="mb-3">Contact Infomation</h5>
+                            <h5 class="mb-3">{{ trans('messages.contact_information') }}</h5>
 
                             <p class="d-flex mb-2">
                                 <i class="bi-geo-alt me-2"></i>
@@ -331,31 +329,31 @@
                             </p>
 
                             <a href="https://maps.app.goo.gl/7sLZRnBmun1tfJRAA" target="_blank"
-                               class="custom-btn btn mt-3">Get Direction</a>
+                               class="custom-btn btn mt-3">{{ trans('messages.get_directions') }}</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-5 col-12 mx-auto" id="section_6">
                     <form class="custom-form contact-form" action="#" method="post" role="form">
-                        <h2>Contact Us</h2>
+                        <h2>{{ trans('messages.contact_us') }}</h2>
 
-                        <p class="mb-4">Or, you can just send an email:
+                        <p class="mb-4">{{ trans('messages.or_send_email') }}:
                             <a href="#">info@lfl-usa.com</a>
                         </p>
 
                         <div class="col-lg-12 col-12">
                             <input type="text" name="first-name" id="first-name" class="form-control"
-                                   placeholder="Your name" required>
+                                   placeholder="{{ trans('messages.your_name') }}" required>
                         </div>
 
                         <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
-                               placeholder="Your email" required>
+                               placeholder="{{ trans('messages.your_email') }}" required>
 
                         <textarea name="message" rows="5" class="form-control" id="message"
-                                  placeholder="What can we help you?"></textarea>
+                                  placeholder="{{ trans('messages.what_can_help') }}"></textarea>
 
-                        <button type="submit" class="form-control">Send Message</button>
+                        <button type="submit" class="form-control">{{ trans('messages.send_message') }}</button>
                     </form>
                 </div>
 
