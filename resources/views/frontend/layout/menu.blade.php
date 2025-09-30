@@ -19,23 +19,32 @@
                     <a class="nav-link click-scroll" href="/">Home</a>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link click-scroll dropdown-toggle" href="#"
-                       role="button" data-bs-toggle="dropdown"
-                       aria-expanded="false">{{ trans('messages.about') }}</a>
-                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">{{ trans('messages.administration') }}</a></li>
-                        <li><a class="dropdown-item" href="/about">Lar Frei Luiz</a></li>
-                        <li><a class="dropdown-item" href="/spiritism">{{ trans('messages.espiritism') }}</a></li>
-                        <li><a class="dropdown-item" href="/founders">{{ trans('messages.founders') }}</a></li>
-                        <!-- <li><a class="dropdown-item" href="/soon">{{ trans('messages.photo-gallery') }}</a></li> -->
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">{{ 'About Us' }}</a>
+                </li>
+
+{{--                <li class="nav-item dropdown">--}}
+{{--                    <a class="nav-link click-scroll dropdown-toggle" href="#"--}}
+{{--                       role="button" data-bs-toggle="dropdown"--}}
+{{--                       aria-expanded="false">{{ trans('messages.about') }}</a>--}}
+{{--                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">--}}
+{{--                        <li><a class="dropdown-item" href="#">{{ trans('messages.administration') }}</a></li>--}}
+{{--                        <li><a class="dropdown-item" href="/about">Lar Frei Luiz</a></li>--}}
+{{--                        <li><a class="dropdown-item" href="/spiritism">{{ trans('messages.espiritism') }}</a></li>--}}
+{{--                        <li><a class="dropdown-item" href="/founders">{{ trans('messages.founders') }}</a></li>--}}
+{{--                        <!-- <li><a class="dropdown-item" href="/soon">{{ trans('messages.photo-gallery') }}</a></li> -->--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/library">{{  trans('messages.library') }}</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/soon">{{ trans('messages.espiritism') }}</a>
+                    <a class="nav-link" href="/soon">{{ 'Calendar' }}</a>
                 </li>
 
+                <!--
                 <li class="nav-item dropdown">
                     <a class="nav-link click-scroll dropdown-toggle" href="#"
                        id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
@@ -45,17 +54,17 @@
                         <li><a class="dropdown-item mt-2" href="/soon">{{ trans('messages.lfl-news') }}</a></li>
                         <div class="dropdown-divider"></div>
 
-                       <!-- <li><a class="dropdown-item" href="#">{{ trans('messages.lectures') }}</a></li> -->
+                      <li><a class="dropdown-item" href="#">{{ trans('messages.lectures') }}</a></li>
                         <li><a class="dropdown-item" href="/soon">{{ trans('messages.message-board') }}</a></li>
                         <li><a class="dropdown-item" href="/soon">{{ trans('messages.social-actions') }}</a></li>
                         <li><a class="dropdown-item" href="/library">{{ trans('messages.library') }}</a></li>
                         <li><a class="dropdown-item" href="/soon">{{ trans('messages.bazaar') }}</a></li>
                         <li><a class="dropdown-item" href="/soon">{{ trans('messages.partners') }}</a></li>
                         <li><a class="dropdown-item" href="/soon">{{ trans('messages.courses-trainning') }}</a></li>
-                        <!-- <li><a class="dropdown-item" href="#">Estudos Doutrinarios</a></li> -->
+                         <li><a class="dropdown-item" href="#">Estudos Doutrinarios</a></li>
 
                     </ul>
-                </li>
+                </li>-->
 
 {{--                <li class="nav-item">--}}
 {{--                    <a class="nav-link" href="library.php">{{ trans('messages.library') }}</a>--}}
@@ -65,14 +74,14 @@
 {{--                    <a class="nav-link" href="bazaar.php">{{ trans('messages.bazaar') }}</a>--}}
 {{--                </li>--}}
 
-                <li class="nav-item">
+               <!-- <li class="nav-item">
                     <a class="nav-link click-scroll" href="#section_6">{{ trans('messages.contact') }}</a>
-                </li>
+                </li> -->
                 <li class="nav-item ms-3">
                     <a class="nav-link click-scroll" href="#" data-bs-toggle="modal" data-bs-target="#input-modal" data-bs-whatever="@mdo">{{ 'Caixa de Preçes' }}</a>
                 </li>
                 <li class="nav-item ms-3">
-                    <a class="nav-link custom-btn custom-border-btn btn" href="#">{{ trans('messages.donate') }}</a>
+                    <a class="nav-link custom-btn custom-border-btn btn" href="/soon">{{ trans('messages.donate') }}</a>
                 </li>
 
             </ul>

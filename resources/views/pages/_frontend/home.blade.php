@@ -8,7 +8,7 @@
             <div class="row">
 
                 <div class="col-lg-10 col-12 text-center mx-auto">
-                    <h2 class="mb-5">Welcome to Frei Luiz Charity</h2>
+                    <h2 class="mb-5">Welcome to Lar Frei Luiz USA</h2>
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
@@ -18,7 +18,7 @@
                                  class="featured-block-image img-fluid" alt="">
 
 
-                            <p class="featured-block-text">Become a <strong>volunteer {{ trans('messages.users') }}</strong></p>
+                            <p class="featured-block-text">Reunião Publíca<strong> {{ trans('Passes') }}</strong></p>
                         </a>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                             <img src="{{ asset('assets/images/icons/heart.png') }}"
                                  class="featured-block-image img-fluid" alt="">
 
-                            <p class="featured-block-text"><strong>Events </strong> of Devotion - Locale {{ config('app.locale') }}</p>
+                            <p class="featured-block-text"><strong>Evangelização  </strong> Infantil</p>
                         </a>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                             <img src="{{ asset('assets/images/icons/receive.png') }}"
                                  class="featured-block-image img-fluid" alt="">
 
-                            <p class="featured-block-text">Spiritism is <strong>Love</strong></p>
+                            <p class="featured-block-text">Illumination  <strong>Sessions</strong></p>
                         </a>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                             <img src="{{ asset('assets/images/icons/scholarship.png') }}"
                                  class="featured-block-image img-fluid" alt="">
 
-                            <p class="featured-block-text"><strong>Charity</strong> Program</p>
+                            <p class="featured-block-text"><strong>The Spirits’ </strong> Book Study</p>
                         </a>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
             <div class="row">
 
                 <div class="col-lg-12 col-12 mb-5">
-                    <h2>Latest News</h2>
+                    <h2>LFL Future Events</h2>
                 </div>
 
                 <div class="col-lg-7 col-12">
@@ -126,7 +126,7 @@
 
                             <div class="news-category-block">
                                 <a href="#" class="category-block-link">
-                                    Categoria
+                                   Blood Drive
                                 </a>
                             </div>
                         </div>
@@ -136,14 +136,14 @@
                                 <div class="news-block-date">
                                     <p>
                                         <i class="bi-calendar4 custom-icon me-1"></i>
-                                        October 12, 2036
+                                        October 05, 2025
                                     </p>
                                 </div>
 
                                 <div class="news-block-author mx-5">
                                     <p>
                                         <i class="bi-person custom-icon me-1"></i>
-                                        By Admin
+                                        By LFL USA
                                     </p>
                                 </div>
                                 <!--
@@ -156,13 +156,11 @@
                             </div>
 
                             <div class="news-block-title mb-2">
-                                <h4><a href="news-detail.html" class="news-block-title-link">Clothing donation to
-                                        urban area</a></h4>
+                                <h4><a href="#" class="news-block-title-link">Blood Drive this October 5</a></h4>
                             </div>
 
                             <div class="news-block-body">
-                                <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito
-                                    Professional charity theme based on Bootstrap</p>
+                                <p>Be part of the blood drive this October 5 by the LFL - USA.</p>
                             </div>
                         </div>
                     </div>
@@ -171,15 +169,15 @@
                 </div>
 
                 <div class="col-lg-4 col-12 mx-auto">
-                    <form class="custom-form search-form" action="#" method="post" role="form">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+{{--                    <form class="custom-form search-form" action="#" method="post" role="form">--}}
+{{--                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">--}}
 
-                        <button type="submit" class="form-control">
-                            <i class="bi-search"></i>
-                        </button>
-                    </form>
+{{--                        <button type="submit" class="form-control">--}}
+{{--                            <i class="bi-search"></i>--}}
+{{--                        </button>--}}
+{{--                    </form>--}}
 
-                    <h5 class="mt-5 mb-3">Recent news</h5>
+                    <h5 class="mt-5 mb-3">More Events</h5>
 
                     <div class="news-block news-block-two-col d-flex mt-4">
                         <div class="news-block-two-col-image-wrap">
@@ -191,7 +189,7 @@
 
                         <div class="news-block-two-col-info">
                             <div class="news-block-title mb-2">
-                                <h6><a href="#" class="news-block-title-link">Food donation area</a>
+                                <h6><a href="#" class="news-block-title-link">Fraternity on the streets</a>
                                 </h6>
                             </div>
 
@@ -214,31 +212,54 @@
 
                         <div class="news-block-two-col-info">
                             <div class="news-block-title mb-2">
-                                <h6><a href="#" class="news-block-title-link">Volunteering Clean</a>
+                                <h6><a href="#" class="news-block-title-link">The chosen site tour</a>
                                 </h6>
                             </div>
 
                             <div class="news-block-date">
                                 <p>
                                     <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 24, 2036
+                                    October 24, 2025
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <form class="custom-form subscribe-form" action="#" method="post" role="form">
-                        <h5 class="mb-4">Caixa de Oração</h5>
-
-                        <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*"
-                               class="form-control" placeholder="Ex: John Paul,Maria Blake,Rick Vi" required>
-
-                        <div class="col-lg-12 col-12 text-center">
-                            <!-- <button type="submit" class="btn btn-primary form-control">Encarnados</button> -->
-                            <button type="button" class="btn btn-primary me-4">Encarnados</button>
-                            <button type="button" class="btn btn-outline-secondary">Desencarnados</button>
+                    <div class="news-block news-block-two-col d-flex mt-4">
+                        <div class="news-block-two-col-image-wrap">
+                            <a href="#">
+                                <img src="{{ asset('assets/images/news/close-up-happy-people-working-together.jpg') }}"
+                                     class="news-image img-fluid" alt="">
+                            </a>
                         </div>
-                    </form>
+
+                        <div class="news-block-two-col-info">
+                            <div class="news-block-title mb-2">
+                                <h6><a href="#" class="news-block-title-link">Kids meal DYI meal bags</a>
+                                </h6>
+                            </div>
+
+                            <div class="news-block-date">
+                                <p>
+                                    <i class="bi-calendar4 custom-icon me-1"></i>
+                                    October 24, 2025
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+{{--                    <form class="custom-form subscribe-form" action="#" method="post" role="form">--}}
+{{--                        <h5 class="mb-4">Caixa de Oração</h5>--}}
+
+{{--                        <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*"--}}
+{{--                               class="form-control" placeholder="Ex: John Paul,Maria Blake,Rick Vi" required>--}}
+
+{{--                        <div class="col-lg-12 col-12 text-center">--}}
+{{--                            <!-- <button type="submit" class="btn btn-primary form-control">Encarnados</button> -->--}}
+{{--                            <button type="button" class="btn btn-primary me-4">Encarnados</button>--}}
+{{--                            <button type="button" class="btn btn-outline-secondary">Desencarnados</button>--}}
+{{--                        </div>--}}
+{{--                    </form>--}}
                 </div>
 
             </div>
@@ -249,13 +270,16 @@
             <div class="row justify-content-center align-items-center">
 
                 <div class="col-lg-5 col-12 ms-auto">
-                    <h2 class="mb-0">Make an impact. <br> Save lives.</h2>
+{{--                    <h2 class="mb-0">Make an impact. <br> Save lives.</h2>--}}
+                    <h2 class="mb-0">Join Our Community</h2>
+                    <h3 class="mb-0"> Become a Volunteer</h3>
                 </div>
 
                 <div class="col-lg-5 col-12">
-                    <a href="#" class="me-4">Make a donation</a>
+                   <!-- <a href="#" class="me-4">Make a donation</a> -->
 
-                    <a href="#section_4" class="custom-btn btn smoothscroll">Become a volunteer</a>
+                    <!-- <a href="#section_4" class="custom-btn btn smoothscroll">Become a volunteer</a> -->
+                    <img src="{{ asset('assets/images/qr-volunteer.png') }}" width="200px" height="200px" />
                 </div>
 
             </div>
@@ -270,16 +294,17 @@
                 <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
                     <div class="contact-info-wrap">
                         <h2>Get in touch</h2>
+                        <hr>
 
-                        <div class="contact-image-wrap d-flex flex-wrap">
-                            <img src="{{ asset('assets/images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg') }}"
-                                 class="img-fluid avatar-image" alt="">
+{{--                        <div class="contact-image-wrap d-flex flex-wrap">--}}
+{{--                            <img src="{{ asset('assets/images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg') }}"--}}
+{{--                                 class="img-fluid avatar-image" alt="">--}}
 
-                            <div class="d-flex flex-column justify-content-center ms-3">
-                                <p class="mb-0">Ana & Eduardo</p>
-                                <p class="mb-0"><strong>Office Manager</strong></p>
-                            </div>
-                        </div>
+{{--                            <div class="d-flex flex-column justify-content-center ms-3">--}}
+{{--                                <p class="mb-0">Ana & Eduardo</p>--}}
+{{--                                <p class="mb-0"><strong>Office Manager</strong></p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
                         <div class="contact-info">
                             <h5 class="mb-3">Contact Infomation</h5>

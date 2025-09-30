@@ -57,8 +57,6 @@
     @endisset
 
     <!-- { Inout modal Box of Prayers } -->
-    <form action="{{ route('prayerbox.store') }}" method="POST" enctype="multipart/form-data">
-        @csrf
     <div class="modal fade" id="input-modal">
         <div class="modal-dialog" role="document">
             <div class="modal-content modal-content-demo">
@@ -68,6 +66,8 @@
                         <span aria-hidden="true"></span>
                     </button>
                 </div>
+                <form action="{{ route('prayerbox.store') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
                 <div class="modal-body">
                         <div class="mb-3">
                             <label for="recipient-name" class="col-form-label">{{ 'Recipiente(s)' }}:</label>
@@ -87,13 +87,12 @@
                     <button class="btn ripple btn-success" type="submit">Enviar</button>
                     <button class="btn ripple btn-danger" data-bs-dismiss="modal" type="button">Close</button>
                 </div>
+                </form>
             </div>
         </div>
     </div>
-    </form>
+
     <!-- end modal prece -->
-
-
 
     <!--
         <section class="cta-section section-padding section-bg">

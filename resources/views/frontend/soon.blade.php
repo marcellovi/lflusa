@@ -41,54 +41,8 @@
             <div class="row">
 
                 <div class="col-lg-10 col-12 text-center mx-auto">
-                    <h2 class="mb-5">Soon this page will be available!</h2>
+                    <h2 class="mb-5">Coming Soon!</h2>
                 </div>
-
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="#section_4" class="d-block">
-                            <img src="{{ asset('assets/images/icons/hands.png') }}"
-                                 class="featured-block-image img-fluid" alt="">
-
-
-                            <p class="featured-block-text">Become a <strong>volunteer {{ trans('messages.users') }}</strong></p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="#" class="d-block">
-                            <img src="{{ asset('assets/images/icons/heart.png') }}"
-                                 class="featured-block-image img-fluid" alt="">
-
-                            <p class="featured-block-text"><strong>Events </strong> of Devotion - Locale {{ config('app.locale') }}</p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="#" class="d-block">
-                            <img src="{{ asset('assets/images/icons/receive.png') }}"
-                                 class="featured-block-image img-fluid" alt="">
-
-                            <p class="featured-block-text">Spiritism is <strong>Love</strong></p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="#" class="d-block">
-                            <img src="{{ asset('assets/images/icons/scholarship.png') }}"
-                                 class="featured-block-image img-fluid" alt="">
-
-                            <p class="featured-block-text"><strong>Charity</strong> Program</p>
-                        </a>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>

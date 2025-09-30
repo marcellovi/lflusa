@@ -21,9 +21,9 @@
                                  class="carousel-image img-fluid" alt="...">
 
                             <div class="carousel-caption d-flex flex-column justify-content-end">
-                                <h1>Non-profit</h1>
+                                <!-- <h1>Non-profit</h1>
 
-                                <p>You can support us to grow more</p>
+                                <p>You can support us to grow more</p> -->
                             </div>
                         </div>
 

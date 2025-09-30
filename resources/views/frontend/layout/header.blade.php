@@ -34,9 +34,8 @@
                     <li class="social-icon-item">
                         <a href="https://www.youtube.com/@ScienceSpiritualityConnection" class="social-icon-link bi-youtube" target="_blank"></a>
                     </li>
-
                     <li class="social-icon-item">
-                        <a href="#" class="social-icon-link bi-whatsapp"></a>
+                        <a href="https://chat.whatsapp.com/KAdYxNIRCneFshXQPTMcVP" target="_blank" class="social-icon-link bi-whatsapp"></a>
                     </li>
 
                     @php $locale = session()->get('locale'); @endphp

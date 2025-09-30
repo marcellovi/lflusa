@@ -39,4 +39,6 @@
     'rent' => 'Emprestimo',
     'sell' => 'Venda',
 
+    // ABOUT PAGE //
+    'aboutus_' => 'About Us',
 ];
