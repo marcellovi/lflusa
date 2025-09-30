@@ -313,8 +313,8 @@
                                                             </button>
                                                         @elseif($book->type == 'messages.sell')
                                                             <button type="button" class="add-to-cart-btn"><i
-                                                                    class="bi-cart-plus-fill"></i> Add to
-                                                                Cart {{ empty($book->cover_image) ? $book->cover_image : 'cheio' }}
+                                                                    class="bi-cart-plus-fill"></i> Add to Cart
+                                                                 {{-- {{ empty($book->cover_image) ? $book->cover_image : 'cheio' }}--}}
                                                             </button>
                                                         @elseif($book->type == 'messages.rent')
                                                             <button type="button" class="add-to-cart-btn"><i
