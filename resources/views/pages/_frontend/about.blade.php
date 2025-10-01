@@ -23,10 +23,10 @@
                         <p class="mb-3" style="color: white;font-weight: 600px"><b>
                                 {{ trans('messages.about_title_text') }}</b></p>
                         <h2 class="mb-2">{{ trans('messages.aboutus_mission_title') }}:</h2>
-                        <p class="mb-3" style="color: white">
+                        <p class="mb-3"  style="color: white;font-weight: 600px">
                             {{ trans('messages.aboutus_mission_title_text') }}</p>
                         <h2 class="mb-2">{{ trans('messages.aboutus_activities_programs_title') }}:</h2>
-                        <p class="mb-0">
+                        <p class="mb-0"  style="color: white;font-weight: 600px">
                             In the greater Houston area but not limited to and with the hard work and support from all volunteers and friends, LFL-USA will strive to become in the near future an organization with all infrastructure capable of providing means to help the ones in need: We hold Public Meetings, Lectures, Seminars, and Conferences to discuss Christian teachings; promote book studies envisioning improvement on moral and spiritual values. LFL-USA holds free workshops and art classes on Music, Arts, Culinary, creating a welcoming, friendly, and safe environment in order to provide counseling for (but not limited to) poor people, addictive, and depressed people. LFL-USA also aims to hold free workshops on Meditation and Yoga to support wellbeing and good spiritual health.
                             <br><br>
                             To achieve our goals and support the organization and its charity activities LFL-USA promotes Seminars, Lecturers, Trainings, Bazars, and fundraises.
