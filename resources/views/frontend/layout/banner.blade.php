@@ -10,7 +10,7 @@
                                  class="carousel-image img-fluid" alt="...">
 
                             <div class="carousel-caption d-flex flex-column justify-content-end">
-                                <h1>Faiht</h1>
+                                <h1>Faith</h1>
 
                                 <p></p>
                             </div>
