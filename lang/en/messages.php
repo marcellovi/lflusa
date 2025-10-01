@@ -67,7 +67,7 @@
 
     // ABOUT PAGE //
     'about_title' => 'About Us',
-    'about_title_text' => 'O LFL USA foi inaugurado em fevereiro de 2025 em Houston, TX inspirado? no LFL Sobre o LFL | Lar de Frei Luiz com a missão de expandir o conhecimento do espiritismo nos Estados Unidos e praticar a caridade em suas mais variadas formas.',
+    'about_title_text' => 'LFL USA was created in February 2025 in Houston, TX inspired by the social works of LFL Rio de Janeiro, Brazil with a mission to expand the spiritism knowledge in the USA and promote charity through different means.',
     'aboutus_mission_title' => 'Mission',
     'aboutus_mission_title_text' => 'LFL-USA is a non-profit organization dedicated to promoting charity through different means such as supporting adults and children in need, the elderly lacking access to a decent living, the sick, the poor and those with addictions or depression.',
     'aboutus_activities_programs_title' => 'Activities and Programs',
