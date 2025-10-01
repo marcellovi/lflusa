@@ -48,7 +48,8 @@
     "welcome_box_1_text" => "We are a welcoming community that embraces individuals from all backgrounds who are interested in exploring the teachings of Spiritism and applying them in their daily lives.",
 
     "home_future_events" => "LFL Future Events",
-    "home_more_events" => "More Events",
+    "home_more_events" => "Next Events",
+    "home_past_events" => "Past Events",
 
 
     "home_join_community" => "Join Our Community",

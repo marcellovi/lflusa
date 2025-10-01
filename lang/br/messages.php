@@ -48,7 +48,8 @@
     "welcome_box_1_text" => "Somos uma comunidade acolhedora que acolhe pessoas de todas as origens interessadas em explorar os ensinamentos do Espiritismo e aplicá-los em suas vidas diárias.",
 
     "home_future_events" => "LFL Próximos Eventos",
-    "home_more_events" => "Mais Eventos",
+    "home_more_events" => "Proximos Eventos",
+    "home_past_events" => "Eventos Anteriores",
 
 
     "home_join_community" => "Junte-se à Comunidade",

@@ -175,7 +175,7 @@
 {{--                        </button>--}}
 {{--                    </form>--}}
 
-                    <h5 class="mt-5 mb-3">{{ trans('messages.home_more_events') }}</h5>
+                    <h5 class="mt-5 mb-3">{{ trans('messages.home_past_events') }}</h5>
 
                     <div class="news-block news-block-two-col d-flex mt-4">
                         <div class="news-block-two-col-image-wrap">
