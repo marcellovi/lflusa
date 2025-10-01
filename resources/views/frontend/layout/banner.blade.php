@@ -10,9 +10,9 @@
                                  class="carousel-image img-fluid" alt="...">
 
                             <div class="carousel-caption d-flex flex-column justify-content-end">
-                                <h1>What is Spiritism</h1>
+                                <h1>Faiht</h1>
 
-                                <p>Knowing more about the codified philosophy</p>
+                                <p></p>
                             </div>
                         </div>
 
@@ -21,8 +21,8 @@
                                  class="carousel-image img-fluid" alt="...">
 
                             <div class="carousel-caption d-flex flex-column justify-content-end">
-                                <!-- <h1>Non-profit</h1>
-
+                                 <h1>Love</h1>
+<!--
                                 <p>You can support us to grow more</p> -->
                             </div>
                         </div>
@@ -32,9 +32,9 @@
                                  class="carousel-image img-fluid" alt="...">
 
                             <div class="carousel-caption d-flex flex-column justify-content-end">
-                                <h1>Humanity</h1>
+                                <h1>Charity</h1>
 
-                                <p>Please tell your friends about our website</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
