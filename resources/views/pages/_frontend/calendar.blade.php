@@ -31,61 +31,76 @@
                     center: 'title',
                     right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
                 },
-                initialDate: '2025-01-12',
+                initialDate: '2025-10-01',
                 navLinks: true, // can click day/week names to navigate views
                 businessHours: true, // display business hours
                 editable: true,
                 selectable: true,
                 events: [
                     {
-                        title: 'Business Lunch',
-                        start: '2025-01-03T13:00:00',
-                        constraint: 'businessHours'
-                    },
-                    {
-                        title: 'Meeting',
-                        start: '2025-01-13T11:00:00',
-                        constraint: 'availableForMeeting', // defined below
+                        title: "Grupo Irmã Scheilla: Irradiação em português",
+                        start: "2025-10-02T20:00",
                         color: '#257e4a'
                     },
                     {
-                        title: 'Conference',
-                        start: '2025-01-18T20:00:00',
-                        end: '2025-01-20T20:00:00'
+                        title: "Curso: noções básicas da doutrina",
+                        start: "2025-10-02T20:30",
+                        color: '#257e4a'
                     },
                     {
-                        title: 'Party',
-                        start: '2025-01-29T20:00:00'
-                    },
-
-                    // areas where "Meeting" must be dropped
-                    {
-                        groupId: 'availableForMeeting',
-                        start: '2025-01-11T10:00:00',
-                        end: '2025-01-11T16:00:00',
-                        display: 'background'
+                    title: "Grupo Irmã Scheilla: Irradiação em português",
+                    start: "2025-10-03T20:00",
+                    color: '#257e4a'
                     },
                     {
-                        groupId: 'availableForMeeting',
-                        start: '2025-01-13T10:00:00',
-                        end: '2025-01-13T16:00:00',
-                        display: 'background'
-                    },
-
-                    // red areas where no events can be dropped
-                    {
-                        start: '2025-01-24',
-                        end: '2025-01-28',
-                        overlap: false,
-                        display: 'background',
-                        color: '#ff9f89'
+                    title: "Fraternity on the streets @ Rosemary Place",
+                    start: "2025-10-04T08:30",
+                    color: '#257e4a'
                     },
                     {
-                        start: '2025-01-06',
-                        end: '2025-01-08',
-                        overlap: false,
-                        display: 'background',
-                        color: '#ff9f89'
+                    title: "Blood Drive @ LFL",
+                    start: "2025-10-05T09:00",
+                    color: '#257e4a'
+                    },
+                    {
+                    title: "SLiDS Group: the spirits’ book in english",
+                    start: "2025-10-04T15:00",
+                    color: '#257e4a'
+                    },
+                    {
+                    title: "Reunião Publica é evangelização infantil @ LFL",
+                    start: "2025-10-05T10:30",
+                    color: '#257e4a'
+                    },
+                    {
+                    title: "Passe @ LFL",
+                    start: "2025-10-05T11:30",
+                    color: '#257e4a'
+                    },
+                    {
+                    title: "Grupo Irmã Scheilla: Irradiação em português",
+                    start: "2025-10-06T20:00",
+                    color: '#257e4a'
+                    },
+                    {
+                    title: "Mentora Scheilla & Ermance Dufaux: Illumination Sessiom in english",
+                    start: "2025-10-07T20:00",
+                    color: '#257e4a'
+                    },
+                    {
+                    title: "Grupo Irmã Scheilla: Irradiação em português",
+                    start: "2025-10-09T20:00",
+                    color: '#257e4a'
+                    },
+                    {
+                    title: "Grupo Irmã Scheilla: Irradiação em português",
+                    start: "2025-10-10T20:00",
+                    color: '#257e4a'
+                    },
+                    {
+                    title: "SLiDS Group: the spirits’ book in english",
+                    start: "2025-10-11T15:00",
+                    color: '#257e4a'
                     }
                 ]
             });
