@@ -89,9 +89,9 @@ Route::get('/',[HomeController::class,'index'])->name('frontend.home');
 //});
 
 //
-//Route::get('/', function () {
-//    return view('frontend/index');
-//});
+Route::get('/calendar', function () {
+    return view('pages._frontend.calendar');
+});
 
 
 
