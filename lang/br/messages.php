@@ -73,7 +73,9 @@
     'aboutus_mission_title' => 'Missão',
     'aboutus_mission_title_text' => 'A LFL-USA é uma organização sem fins lucrativos dedicada a promover a caridade por diferentes meios, como apoiar adultos e crianças necessitadas, idosos sem acesso a uma vida digna, doentes, pobres e pessoas com vícios ou depressão.',
     'aboutus_activities_programs_title' => 'Atividades & Programas',
-    'aboutus_activities_programs_title_text' => '...',
+    'aboutus_activities_programs_title_text' => 'Na área metropolitana de Houston, mas não se limitando a isso, e com o trabalho árduo e o apoio de todos os voluntários e amigos, a LFL-USA se esforçará para se tornar, em um futuro próximo, uma organização com toda a infraestrutura capaz de fornecer meios para ajudar os necessitados: realizamos reuniões públicas, palestras, seminários e conferências para discutir os ensinamentos cristãos; promovemos estudos bibliográficos visando o aprimoramento dos valores morais e espirituais.
+     <?br?><?br?>
+     A LFL-USA oferece workshops e aulas de arte gratuitos sobre música, artes e culinária, criando um ambiente acolhedor, amigável e seguro para oferecer aconselhamento a (mas não se limitando a) pessoas pobres, dependentes químicos e depressivas. A LFL-USA também visa realizar workshops gratuitos de meditação e ioga para promover o bem-estar e a saúde espiritual.',
 
 
 
