@@ -73,7 +73,7 @@
     'aboutus_mission_title_text' => 'LFL-USA is a non-profit organization dedicated to promoting charity through different means such as supporting adults and children in need, the elderly lacking access to a decent living, the sick, the poor and those with addictions or depression.',
     'aboutus_activities_programs_title' => 'Activities and Programs',
     'aboutus_activities_programs_title_text' => 'In the greater Houston area but not limited to and with the hard work and support from all volunteers and friends, LFL-USA will strive to become in the near future an organization with all infrastructure capable of providing means to help the ones in need: We hold Public Meetings, Lectures, Seminars, and Conferences to discuss Christian teachings; promote book studies envisioning improvement on moral and spiritual values. LFL-USA holds free workshops and art classes on Music, Arts, Culinary, creating a welcoming, friendly, and safe environment in order to provide counseling for (but not limited to) poor people, addictive, and depressed people. LFL-USA also aims to hold free workshops on Meditation and Yoga to support wellbeing and good spiritual health.
-
+                <?br?><?br?>
                             To achieve our goals and support the organization and its charity activities LFL-USA promotes Seminars, Lecturers, Trainings, Bazars, and fundraises.
                             As long as the organization LFL-USA exists, we will strive to perform well because we believe, this is what everybody should do in return to all the blessings we receive: house, job, family, food, education, access to health care, support from friends, family, job and state, etc.
                             <?br?><?br?>
