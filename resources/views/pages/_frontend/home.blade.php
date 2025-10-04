@@ -112,18 +112,19 @@
                     <h2>{{ trans('messages.home_future_events') }}</h2>
                 </div>
 
-                <div class="col-lg-7 col-12">
+                <div class="col-lg-6 col-12">
                     <div class="news-block">
                         <div class="news-block-top">
                             <a href="#">
                                 <img
-                                    src="{{ asset('assets/images/news/medium-shot-volunteers-with-clothing-donations.jpg') }}"
+                                    src="{{ asset('assets/images/news/blood-drive.jpg') }}"
                                     class="news-image img-fluid" alt="">
                             </a>
 
-                            <div class="news-category-block">
+{{--                            <div class="news-category-block">--}}
+                                <div class="news-category">
                                 <a href="#" class="category-block-link">
-                                   Blood Drive
+{{--                                   Blood Drive--}}
                                 </a>
                             </div>
                         </div>
@@ -161,11 +162,8 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-
-                <div class="col-lg-4 col-12 mx-auto">
+                <div class="col-lg-6 col-12 mx-auto">
 {{--                    <form class="custom-form search-form" action="#" method="post" role="form">--}}
 {{--                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">--}}
 
@@ -174,12 +172,12 @@
 {{--                        </button>--}}
 {{--                    </form>--}}
 
-                    <h5 class="mt-5 mb-3">{{ trans('messages.home_more_events') }}</h5>
+                    <h5 class="mb-3">{{ trans('messages.home_more_events') }}</h5>
 
                     <div class="news-block news-block-two-col d-flex mt-4">
                         <div class="news-block-two-col-image-wrap">
                             <a href="#">
-                                <img src="{{ asset('assets/images/news/africa-humanitarian-aid-doctor.jpg') }}"
+                                <img src="{{ asset('assets/images/news/fraternity-on-streets.jpg') }}"
                                      class="news-image img-fluid" alt="">
                             </a>
                         </div>
@@ -193,7 +191,7 @@
                             <div class="news-block-date">
                                 <p>
                                     <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 16, 2036
+                                    October 18, 2025
                                 </p>
                             </div>
                         </div>
@@ -202,7 +200,7 @@
                     <div class="news-block news-block-two-col d-flex mt-4">
                         <div class="news-block-two-col-image-wrap">
                             <a href="#">
-                                <img src="{{ asset('assets/images/news/close-up-happy-people-working-together.jpg') }}"
+                                <img src="{{ asset('assets/images/news/The Chose Site Tour.png') }}"
                                      class="news-image img-fluid" alt="">
                             </a>
                         </div>
@@ -216,7 +214,10 @@
                             <div class="news-block-date">
                                 <p>
                                     <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 24, 2025
+                                    October 24 - 25, 2025
+                                    <br>
+                                    <i class="bi-calendar4 custom-icon me-1"></i>
+                                    October 31 - Nov. 1, 2025
                                 </p>
                             </div>
                         </div>
@@ -227,25 +228,48 @@
                     <div class="news-block news-block-two-col d-flex mt-4">
                         <div class="news-block-two-col-image-wrap">
                             <a href="#">
-                                <img src="{{ asset('assets/images/news/close-up-happy-people-working-together.jpg') }}"
+                                <img src="{{ asset('assets/images/news/blood-drive-pic2.jpg') }}"
                                      class="news-image img-fluid" alt="">
                             </a>
                         </div>
 
                         <div class="news-block-two-col-info">
                             <div class="news-block-title mb-2">
-                                <h6><a href="#" class="news-block-title-link">Kids meal DYI meal bags</a>
+                                <h6><a href="#" class="news-block-title-link">LFL Blood Drive</a>
                                 </h6>
                             </div>
 
                             <div class="news-block-date">
                                 <p>
                                     <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 24, 2025
+                                    June 15, 2025
                                 </p>
                             </div>
                         </div>
                     </div>
+
+{{--                    <div class="news-block news-block-two-col d-flex mt-4">--}}
+{{--                        <div class="news-block-two-col-image-wrap">--}}
+{{--                            <a href="#">--}}
+{{--                                <img src="{{ asset('assets/images/news/blood-drive-pic2.jpg') }}"--}}
+{{--                                     class="news-image img-fluid" alt="">--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
+
+{{--                        <div class="news-block-two-col-info">--}}
+{{--                            <div class="news-block-title mb-2">--}}
+{{--                                <h6><a href="#" class="news-block-title-link">Kids meal DYI meal bags</a>--}}
+{{--                                </h6>--}}
+{{--                            </div>--}}
+
+{{--                            <div class="news-block-date">--}}
+{{--                                <p>--}}
+{{--                                    <i class="bi-calendar4 custom-icon me-1"></i>--}}
+{{--                                    October 24, 2025--}}
+{{--                                </p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
 {{--                    <form class="custom-form subscribe-form" action="#" method="post" role="form">--}}
 {{--                        <h5 class="mb-4">Caixa de Oração</h5>--}}

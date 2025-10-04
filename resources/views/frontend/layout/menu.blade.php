@@ -41,7 +41,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/soon">{{ trans('messages.our-calendar') }}</a>
+                    <a class="nav-link" href="/calendar">{{ trans('messages.our-calendar') }}</a>
                 </li>
 
                 <!--

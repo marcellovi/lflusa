@@ -44,6 +44,9 @@ Route::post('/contact-form', function () {
     return redirect()->back()->with('success', 'Sua mensagem foi enviada com sucesso!.');
 })->name('contact-form');
 
+Route::get('/calendar', function () {
+    return view('pages._frontend.calendar');
+});
 
 
 
@@ -98,9 +101,6 @@ Route::get('/',[HomeController::class,'index'])->name('frontend.home');
 //});
 
 //
-Route::get('/calendar', function () {
-    return view('pages._frontend.calendar');
-});
 
 
 

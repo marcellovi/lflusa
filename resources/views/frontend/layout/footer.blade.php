@@ -9,15 +9,17 @@
                 <h5 class="site-footer-title mb-3">Quick Links</h5>
 
                 <ul class="footer-menu">
-                    <li class="footer-menu-item"><a href="fundadores.php" class="footer-menu-link">Our Story</a></li>
+                    <li class="footer-menu-item"><a href="/about" class="footer-menu-link">Our Story</a></li>
 
-                    <li class="footer-menu-item"><a href="#" class="footer-menu-link">Newsroom</a></li>
+                    <li class="footer-menu-item"><a href="/calendar" class="footer-menu-link">{{ trans('messages.our-calendar') }}</a></li>
 
-                    <li class="footer-menu-item"><a href="#" class="footer-menu-link">Causes</a></li>
+                    <li class="footer-menu-item"><a href="/library" class="footer-menu-link">Library</a></li>
 
-                    <li class="footer-menu-item"><a href="#section_4" class="footer-menu-link">Become a volunteer</a></li>
+                    <li class="footer-menu-item"><a href="/soon" class="footer-menu-link">Become a volunteer</a></li>
 
-                    <li class="footer-menu-item"><a href="#section_6" class="footer-menu-link">Partner with us</a></li>
+                    <li class="footer-menu-item"><a href="/soon" class="footer-menu-link">Partner with us</a></li>
+
+                    <li class="footer-menu-item"><a href="/soon" class="footer-menu-link">Donate</a></li>
                 </ul>
             </div>
 
