@@ -2,6 +2,8 @@
 <link rel="stylesheet" href="{{ asset('assets/styles/css/bootstrap-icons.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/styles/css/lflusa.css') }}">
 
+
+
 <!-- Bootstrap 4.6 CSS
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
  -->

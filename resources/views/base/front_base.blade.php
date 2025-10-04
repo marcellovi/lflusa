@@ -92,6 +92,102 @@
         </div>
     </div>
 
+    <!-- Other Evento -->
+    <div class="modal fade" id="evento-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">{{ 'Eventos' }}</h6>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <ul>
+                            <li>
+                                <label for="recipient-name" class="col-form-label">{{ 'Reuniao Pública & Passes' }}:</label>
+                            </li>
+                            <li>
+                                <label for="recipient-name" class="col-form-label">{{ 'Evangelização Infantil' }}:</label>
+                            </li>
+                            <li>
+                                <label for="recipient-name" class="col-form-label">{{ 'Irradiação' }}:</label>
+                            </li>
+                            <li>
+                                <label for="recipient-name" class="col-form-label">{{ 'Estudo do Livro dos Espirítos' }}:</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Other Cursos -->
+    <div class="modal fade" id="cursos-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">{{ 'Cursos & Treinamentos' }}</h6>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <ul>
+                            <li>
+                                <label for="recipient-name" class="col-form-label">{{ 'Noções básicas do Espiritismo' }}:</label>
+                            </li>
+                            <li>
+                                <label for="recipient-name" class="col-form-label">{{ 'Estudo Dirigido do livro Paulo Estevão' }}:</label>
+                            </li>
+                            <li>
+                                <label for="recipient-name" class="col-form-label">{{ 'Irradiação' }}:</label>
+                            </li>
+                            <li>
+                                <label for="recipient-name" class="col-form-label">{{ 'Estudo do Livro dos Espirítos' }}:</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Other voluntario -->
+    <div class="modal fade" id="voluntario-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">{{ 'Ações Sociais' }}</h6>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <ul>
+                            <li>
+                                <label for="recipient-name" class="col-form-label">{{ 'Fraternidade Sem Fronteiras' }}:</label>
+                            </li>
+                            <li>
+                                <label for="recipient-name" class="col-form-label">{{ 'Fraternidade nas Ruas' }}:</label>
+                            </li>
+                            <li>
+                                <label for="recipient-name" class="col-form-label">{{ 'Kids Meals' }}:</label>
+                            </li>
+                            <li>
+                                <label for="recipient-name" class="col-form-label">{{ 'Gulf Coast Blood Drive' }}:</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- end modal prece -->
 
     <!--

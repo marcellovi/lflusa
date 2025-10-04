@@ -60,7 +60,7 @@
 
     "contact_us" => "Fale Conosco",
     "or_send_email" => "Ou, simplesmente envie-nos um e-mail:",
-    "your_name" => "Seu name",
+    "your_name" => "Seu nome",
     "your_email" => "Seu email",
     "what_can_help" => "Como podemos ajudar?",
     "send_message" => "Enviar Mensagem",

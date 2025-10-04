@@ -11,50 +11,49 @@
                     <h2 class="mb-5"{{ trans('messages.welcome') }}</h2>
                 </div>
 
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                     <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="#section_4" class="d-block">
+
+                        <a href="#" class="d-block" data-bs-toggle="modal" data-bs-target="#evento-modal" data-bs-whatever="@mdo">
                             <img src="{{ asset('assets/images/icons/hands.png') }}"
                                  class="featured-block-image img-fluid" alt="">
-
-
-                            <p class="featured-block-text">Reunião Publíca<strong> {{ trans('Passes') }}</strong></p>
+                            <p class="featured-block-text"><strong>Eventos<!-- & {{ trans('Passes') }} --></strong></p>
                         </a>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
+                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                     <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="#" class="d-block">
+                        <a href="#" class="d-block" data-bs-toggle="modal" data-bs-target="#cursos-modal" data-bs-whatever="@mdo">
                             <img src="{{ asset('assets/images/icons/heart.png') }}"
                                  class="featured-block-image img-fluid" alt="">
 
-                            <p class="featured-block-text"><strong>Evangelização  </strong> Infantil</p>
+                            <p class="featured-block-text"><strong>Cursos &  </strong> Treinamento</p>
                         </a>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
+                <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 mb-md-4">
                     <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="#" class="d-block">
+                        <a href="#" class="d-block" data-bs-toggle="modal" data-bs-target="#voluntario-modal" data-bs-whatever="@mdo">
                             <img src="{{ asset('assets/images/icons/receive.png') }}"
                                  class="featured-block-image img-fluid" alt="">
 
-                            <p class="featured-block-text">Illumination  <strong>Sessions</strong></p>
+                            <p class="featured-block-text">Ações  <strong>Sociais</strong></p>
                         </a>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                    <div class="featured-block d-flex justify-content-center align-items-center">
-                        <a href="#" class="d-block">
-                            <img src="{{ asset('assets/images/icons/scholarship.png') }}"
-                                 class="featured-block-image img-fluid" alt="">
+{{--                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">--}}
+{{--                    <div class="featured-block d-flex justify-content-center align-items-center">--}}
+{{--                        <a href="#" class="d-block">--}}
+{{--                            <img src="{{ asset('assets/images/icons/scholarship.png') }}"--}}
+{{--                                 class="featured-block-image img-fluid" alt="">--}}
 
-                            <p class="featured-block-text"><strong>The Spirits’ </strong> Book Study</p>
-                        </a>
-                    </div>
-                </div>
+{{--                            <p class="featured-block-text"><strong>The Spirits’ </strong> Book Study</p>--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
             </div>
         </div>
@@ -337,7 +336,9 @@
                 </div>
 
                 <div class="col-lg-5 col-12 mx-auto" id="section_6">
-                    <form class="custom-form contact-form" action="#" method="post" role="form">
+                    <form class="custom-form contact-form" action="{{ route('contact-form') }}" method="post" role="form" enctype="multipart/form-data">
+                        @csrf
+                        @method('post')
                         <h2>{{ trans('messages.contact_us') }}</h2>
 
                         <p class="mb-4">{{ trans('messages.or_send_email') }}:

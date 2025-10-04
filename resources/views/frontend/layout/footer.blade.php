@@ -63,11 +63,11 @@
                 <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
                     <ul class="social-icon">
                         <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-whatsapp"></a>
+                            <a href="https://chat.whatsapp.com/KAdYxNIRCneFshXQPTMcVP" target="_blank" class="social-icon-link bi-whatsapp"></a>
                         </li>
 
                         <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-facebook"></a>
+                            <a href="https://www.facebook.com/lardefreiluizusa" target="_blank" class="social-icon-link bi-facebook"></a>
                         </li>
 
                         <li class="social-icon-item">
@@ -75,7 +75,7 @@
                         </li>
 
                         <li class="social-icon-item">
-                            <a href="#" class="social-icon-link bi-youtube"></a>
+                            <a href="https://www.youtube.com/@ScienceSpiritualityConnection" target="_blank" class="social-icon-link bi-youtube"></a>
                         </li>
                     </ul>
                 </div>

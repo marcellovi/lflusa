@@ -28,7 +28,7 @@
                     </li>
 
                     <li class="social-icon-item">
-                        <a href="https://www.instagram.com/lar_de_frei_luiz_usa/" target="_blank" class="social-icon-link bi-instagram"></a>
+                        <a href="https://www.instagram.com/lar_de_frei_luiz_usa" target="_blank" class="social-icon-link bi-instagram"></a>
                     </li>
 
                     <li class="social-icon-item">

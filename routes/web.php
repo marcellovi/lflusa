@@ -40,7 +40,16 @@ Route::get('/soon', function () {
     return view('frontend/soon');
 });
 
-/*** ADMIN ***/
+Route::post('/contact-form', function () {
+    return redirect()->back()->with('success', 'Sua mensagem foi enviada com sucesso!.');
+})->name('contact-form');
+
+
+
+
+/**********************************/
+/*************** ADMIN ***********/
+/**********************************/
 
 Route::get('/myadmin', function () {
     return view('admin/dashboard');
@@ -92,6 +101,7 @@ Route::get('/',[HomeController::class,'index'])->name('frontend.home');
 Route::get('/calendar', function () {
     return view('pages._frontend.calendar');
 });
+
 
 
 
