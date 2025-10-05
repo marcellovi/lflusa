@@ -294,7 +294,7 @@
 
                 <div class="col-lg-5 col-12 ms-auto">
 {{--                    <h2 class="mb-0">Make an impact. <br> Save lives.</h2>--}}
-                    <h2 class="mb-0">{{ trans('messages.home_join_community') }}</h2>
+                    <h2 class="mb-0"><a href="https://chat.whatsapp.com/KAdYxNIRCneFshXQPTMcVP" target="_blank" title="Clique Aqui e faça parte!">{{ trans('messages.home_join_community') }}</a></h2>
                     <h3 class="mb-0">{{ trans('messages.become_volunteer') }}</h3>
                 </div>
 
@@ -302,7 +302,8 @@
                    <!-- <a href="#" class="me-4">Make a donation</a> -->
 
                     <!-- <a href="#section_4" class="custom-btn btn smoothscroll">Become a volunteer</a> -->
-                    <img src="{{ asset('assets/images/qr-volunteer.png') }}" width="200px" height="200px" />
+                    <a href="https://chat.whatsapp.com/KAdYxNIRCneFshXQPTMcVP" target="_blank" title="Clique Aqui e faça parte!">
+                        <img src="{{ asset('assets/images/qr-volunteer.png') }}" width="200px" height="200px" /></a>
                 </div>
 
             </div>
