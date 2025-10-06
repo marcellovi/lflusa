@@ -27,7 +27,7 @@ class BookController extends Controller
                     ->select('books.id as book_id','title','type','edition','price','copies','condition','status',
                     'languages.name as language','publishers.name as publisher',
                         DB::raw("GROUP_CONCAT(authors.name ORDER BY authors.name SEPARATOR ', ')  as author"))
-                    ->groupBy('books.id')
+                    ->groupBy('books.id','title','type','edition','price','copies','condition','status','language','publisher')
                     ->get();
         return view('pages._admin.library.index', compact('books'));
     }
