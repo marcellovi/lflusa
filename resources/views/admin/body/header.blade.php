@@ -21,10 +21,10 @@
                      alt="logo">
             </a>
             <!-- LOGO -->
-            <div class="main-header-center ms-3 d-none d-lg-block">
-                <input type="text" class="form-control" id="typehead" placeholder="Search for results...">
-                <button class="btn px-0 pt-2"><i class="fe fe-search" aria-hidden="true"></i></button>
-            </div>
+{{--            <div class="main-header-center ms-3 d-none d-lg-block">--}}
+{{--                <input type="text" class="form-control" id="typehead" placeholder="Search for results...">--}}
+{{--                <button class="btn px-0 pt-2"><i class="fe fe-search" aria-hidden="true"></i></button>--}}
+{{--            </div>--}}
             <div class="d-flex order-lg-2 ms-auto header-right-icons">
                 <!-- SEARCH -->
                 <button class="navbar-toggler navresponsive-toggler d-lg-none ms-auto" type="button"
@@ -53,7 +53,7 @@
                                 </div>
                             </div>
 
-                            <!-- INTERNATIONALIZATION -->
+                            <!-- INTERNATIONALIZATION
                             <div class="d-flex country">
                                             <span class="nav-link icon text-center">
                                                 <select id="template-with-flag-icons">
@@ -67,7 +67,7 @@
                                                     <option value="Indonesia" data-flag="id">Indonesia</option>
                                                 </select>
                                             </span>
-                            </div>
+                            </div>-->
 
                             <!-- THEME LAYOUT OPTIONS -->
                             <div class="d-flex">
@@ -77,7 +77,7 @@
                                 </a>
                             </div>
 
-                            <!-- CART -->
+                            <!-- CART
                             <div class="dropdown  d-flex shopping-cart">
                                 <a class="nav-link icon text-center" data-bs-toggle="dropdown">
                                     <i class="fe fe-shopping-cart"></i><span
@@ -185,8 +185,8 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- NOTIFICATIONS -->
+                            -->
+                            <!-- NOTIFICATIONS
                             <div class="dropdown  d-flex notifications">
                                 <a class="nav-link icon" data-bs-toggle="dropdown"><i
                                         class="fe fe-bell"></i><span class=" pulse"></span>
@@ -301,8 +301,8 @@
                                         Notification</a>
                                 </div>
                             </div>
-
-                            <!-- NOTIFICATIONS -->
+                            -->
+                            <!-- NOTIFICATIONS
                             <div class="dropdown  d-flex message">
                                 <a class="nav-link icon text-center" data-bs-toggle="dropdown">
                                     <i class="fe fe-message-square"></i><span class="pulse-danger"></span>
@@ -384,11 +384,11 @@
                                         Messages</a>
                                 </div>
                             </div>
-
-                            <!-- SIDE-MENU - THEME CUSTOMIZER -->
+                            -->
+                            <!-- SIDE-MENU - THEME CUSTOMIZER
                             <div class="demo-icon nav-link icon">
                                 <i class="fe fe-settings text_primary"></i>
-                            </div>
+                            </div>-->
 
                             <!-- FULL-SCREEN -->
                             <div class="dropdown d-flex">
@@ -410,15 +410,18 @@
                                         </div>
                                     </div>
                                     <div class="dropdown-divider m-0"></div>
-                                    <a class="dropdown-item" href="user-account-view.html">
+                                    <a class="dropdown-item" href="#l">
                                         <i class="dropdown-icon fe fe-user"></i> Profile
-                                    </a>
+                                    </a><!--
                                     <a class="dropdown-item" href="lockscreen.html">
                                         <i class="dropdown-icon fe fe-lock"></i> Lockscreen
-                                    </a>
-                                    <a class="dropdown-item" href="authentication-signin.html">
+                                    </a> -->
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                    <button type="submit" class="dropdown-item" href="{{ '/logout' }}">
                                         <i class="dropdown-icon fe fe-alert-circle"></i> Sign out
-                                    </a>
+                                    </button>
+                                    </form>
                                 </div>
                             </div>
 

@@ -299,21 +299,21 @@
                                                                 </div>
                                                                 <div class="add-to-cart-container">
                                                                     @if($book->type == 'messages.study')
-                                                                        <button type="button" class="add-to-cart-btn"
-                                                                                style="background-color: #2a3746">Only
-                                                                            Office Use
-                                                                        </button>
+{{--                                                                        <button type="button" class="add-to-cart-btn"--}}
+{{--                                                                                style="background-color: #2a3746">Only--}}
+{{--                                                                            Office Use--}}
+{{--                                                                        </button>--}}
                                                                     @elseif($book->type == 'messages.sell')
-                                                                        <button type="button" class="add-to-cart-btn"><i
-                                                                                class="bi-cart-plus-fill"></i> Add to Cart
+{{--                                                                        <button type="button" class="add-to-cart-btn"><i--}}
+{{--                                                                                class="bi-cart-plus-fill"></i> Add to Cart--}}
 {{--                                                                             {{ empty($book->cover_image) ? $book->cover_image : 'cheio' }}--}}
-                                                                        </button>
+{{--                                                                        </button>--}}
                                                                     @elseif($book->type == 'messages.rent')
-                                                                        <button type="button" class="add-to-cart-btn"><i
-                                                                                class="bi bi-bookmark-star-fill"></i>
-                                                                            Rent
-                                                                            this Book
-                                                                        </button>
+{{--                                                                        <button type="button" class="add-to-cart-btn"><i--}}
+{{--                                                                                class="bi bi-bookmark-star-fill"></i>--}}
+{{--                                                                            Rent--}}
+{{--                                                                            this Book--}}
+{{--                                                                        </button>--}}
                                                                     @endif
                                                                 </div>
                                                             </div>
@@ -321,7 +321,7 @@
                                                         <div class="product-content">
                                                             <div class="product-details">
                                                                 <h3 class="product-title"><a
-                                                                        href="product-details.html">{{ $book->title }}</a>
+                                                                        href="#">{{ $book->title }}</a>
                                                                 </h3>
                                                                 <div class="product-price">
                                                                     <span>${{ $book->price }}</span> ( Qtd. {{ $book->copies }} )

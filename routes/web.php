@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 /*** FRONT END ***/
 
+Route::get('/lang/{lang}', [LocalizationController::class, 'index']);
+
 Route::get('/book/{id}/details', [BookController::class, 'detail'])->name('books.details');
 
 Route::post('/prayerbox',[PrayerboxController::class, 'store'])->name('prayerbox.store');
@@ -48,15 +50,50 @@ Route::get('/calendar', function () {
     return view('pages._frontend.calendar');
 });
 
-
+/** LIBRARY  */
+Route::get('/library',[BookController::class,'list'])->name('frontend.library');
 
 /**********************************/
 /*************** ADMIN ***********/
 /**********************************/
 
-Route::get('/myadmin', function () {
-    return view('admin/dashboard');
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/myadmin', function () { return view('admin/dashboard'); });
+
+    /** LIBRARY  */
+    // returns the library page with all books
+    Route::get('/admin/library/', [BookController::class, 'index'])->name('books.index');
+
+
+
 });
+
+Route::get('/dashboard', function () {
+    return view('admin/dashboard'); //return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+
+Route::post('/downlaod',[BookController::class,'store'])->name('download');
+Route::get('/',[HomeController::class,'index'])->name('frontend.home');
+
+
+// returns the form for adding a book
+Route::get('/admin/library/create', [BookController::class, 'create'])->name('books.create');
+// returns the form for editing a book
+Route::get('/admin/library/{id}/edit', [BookController::class, 'edit'])->name('books.edit');// returns the form for editing a book
+// adds a book to the database
+Route::post('/admin/library/store', [BookController::class, 'store'])->name('books.store');
+
+// Route::get('/admin/library/show/{id}', [BookController::class, 'edit'])->name('books.show');
+
+//Route::post('/admin/library/destroy', [BookController::class, 'destroy'])->name('books.destroy');
+Route::post('/admin/library/update', [BookController::class, 'update'])->name('books.update');
+
+Route::delete('/admin/library/{id}', BookController::class .'@destroy')->name('books.destroy');
 
 //// returns the home page with all posts
 //Route::get('/', PostController::class .'@index')->name('posts.index');
@@ -73,29 +110,12 @@ Route::get('/myadmin', function () {
 //// deletes a post
 //Route::delete('/posts/{post}', PostController::class .'@destroy')->name('posts.destroy');
 
-// returns the library page with all books
-Route::get('/admin/library/', [BookController::class, 'index'])->name('books.index');
-// returns the form for adding a book
-Route::get('/admin/library/create', [BookController::class, 'create'])->name('books.create');
-// returns the form for editing a book
-Route::get('/admin/library/{id}/edit', [BookController::class, 'edit'])->name('books.edit');// returns the form for editing a book
-// adds a book to the database
-Route::post('/admin/library/store', [BookController::class, 'store'])->name('books.store');
-
-// Route::get('/admin/library/show/{id}', [BookController::class, 'edit'])->name('books.show');
-
-//Route::post('/admin/library/destroy', [BookController::class, 'destroy'])->name('books.destroy');
-Route::post('/admin/library/update', [BookController::class, 'update'])->name('books.update');
-
-Route::delete('/admin/library/{id}', BookController::class .'@destroy')->name('books.destroy');
 
 
-Route::get('/lang/{lang}', [LocalizationController::class, 'index']);
 
-/** LIBRARY  */
-Route::get('/library',[BookController::class,'list'])->name('frontend.library');
-Route::post('/downlaod',[BookController::class,'store'])->name('download');
-Route::get('/',[HomeController::class,'index'])->name('frontend.home');
+
+
+
 //Route::get('/library', function() {
 //    return view('frontend/library');
 //});
@@ -125,14 +145,8 @@ Route::get('/library2', function() {
     return view('frontend/library2');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+
+
 
 require __DIR__.'/auth.php';

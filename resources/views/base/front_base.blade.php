@@ -79,7 +79,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label">{{ 'Nome(s)' }}:</label>
-                            <textarea class="form-control" id="names" name="names"></textarea>
+                            <textarea class="form-control" id="names" name="names" placeholder="{{ 'Separe os nomes por virgula ","' }}" ></textarea>
                         </div>
 
                 </div>

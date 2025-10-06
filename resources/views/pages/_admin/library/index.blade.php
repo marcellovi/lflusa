@@ -15,11 +15,12 @@
                             <div
                                 class="d-flex justify-content-between align-items-start card-widget-1 border-end pb-3 pb-sm-0">
                                 <div>
-                                    <h6 class="mb-2 fw-semibold">{{ trans('messages.total_books') }}</h6>
+{{--                                    <h6 class="mb-2 fw-semibold">{{ trans('messages.total_books') }}</h6>--}}
+                                    <h6 class="mb-2 fw-semibold">{{ 'Total Books Available' }}</h6>
                                     <h4 class="mb-2">{{ $books->sum('copies') }}</h4>
-                                    <p class="mb-0"><span class="text-muted me-2">5k
-                                                                orders</span><span class="badge bg-success">+5.7%</span>
-                                    </p>
+{{--                                    <p class="mb-0"><span class="text-muted me-2">5k--}}
+{{--                                                                orders</span><span class="badge bg-success">+5.7%</span>--}}
+{{--                                    </p>--}}
                                 </div>
                                 <div class="avatar me-sm-4">
                                                         <span class="avatar  bg-secondary">
@@ -32,11 +33,12 @@
                             <div
                                 class="d-flex justify-content-between align-items-start card-widget-2 border-end pb-3 pb-sm-0">
                                 <div>
-                                    <h6 class="mb-2 fw-semibold">{{ trans('messages.total_books_sold') }}</h6>
-                                    <h4 class="mb-2">$674,347.12</h4>
-                                    <p class="mb-0"><span class="text-muted me-2">21k
-                                                                orders</span><span
-                                            class="badge bg-success">+12.4%</span></p>
+{{--                                    <h6 class="mb-2 fw-semibold">{{ trans('messages.total_books_sold') }}</h6>--}}
+                                    <h6 class="mb-2 fw-semibold">{{ 'Total Books Sold' }}</h6>
+                                    <h4 class="mb-2">434</h4>
+{{--                                    <p class="mb-0"><span class="text-muted me-2">21k--}}
+{{--                                                                orders</span><span--}}
+{{--                                            class="badge bg-success">+12.4%</span></p>--}}
                                 </div>
                                 <div class="avatar me-lg-4">
                                                         <span class="avatar bg-secondary">
@@ -50,11 +52,12 @@
                             <div
                                 class="d-flex justify-content-between align-items-start border-end pb-3 pb-sm-0 card-widget-3">
                                 <div>
-                                    <h6 class="mb-2 fw-semibold">{{ trans('messages.total_books_rented') }}</h6>
-                                    <h4 class="mb-2">$8,345.23</h4>
-                                    <p class="mb-0"><span class="text-muted me-2">150
-                                                                orders</span><span class="badge bg-danger">-3.5%</span>
-                                    </p>
+                                    <h6 class="mb-2 fw-semibold">{{ 'Total Books Rented' }}</h6>
+{{--                                    <h6 class="mb-2 fw-semibold">{{ trans('messages.total_books_rented') }}</h6>--}}
+                                    <h4 class="mb-2">343</h4>
+{{--                                    <p class="mb-0"><span class="text-muted me-2">150--}}
+{{--                                                                orders</span><span class="badge bg-danger">-3.5%</span>--}}
+{{--                                    </p>--}}
                                 </div>
                                 <div class="avatar  me-sm-4">
                                                         <span class="avatar bg-secondary">
@@ -66,9 +69,10 @@
                         <div class="col-sm-6 col-lg-3">
                             <div class="d-flex justify-content-between align-items-start ">
                                 <div>
-                                    <h6 class="mb-2 fw-semibold">{{ trans('messages.monthly_book_sales') }}</h6>
+                                    <h6 class="mb-2 fw-semibold">{{ 'Total in Sale' }}</h6>
+{{--                                    <h6 class="mb-2 fw-semibold">{{ trans('messages.monthly_book_sales') }}</h6>--}}
                                     <h4 class="mb-2">$14,235.12</h4>
-                                    <p class="mb-0 text-muted">6k orders</p>
+{{--                                    <p class="mb-0 text-muted">6k orders</p>--}}
                                 </div>
                                 <div class="avatar">
                                                         <span class="avatar bg-secondary">
