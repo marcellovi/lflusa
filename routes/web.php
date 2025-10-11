@@ -68,7 +68,9 @@ Route::middleware('auth')->group(function () {
     // returns the library page with all books
     Route::get('/admin/library/', [BookController::class, 'index'])->name('books.index');
 
-
+    /** PRAYER BOX  */
+    Route::get('/admin/prayerbox/', [PrayerBoxController::class, 'index'])->name('prayerbox.index');
+    Route::get('/admin/prayerbox/print', [PrayerBoxController::class, 'print'])->name('prayerbox.print');
 
 });
 
