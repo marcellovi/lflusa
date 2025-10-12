@@ -14,10 +14,10 @@
                 </svg>
             </a>
             <!-- sidebar-toggle-->
-            <a class="logo-horizontal " href="index.html">
-                <img src="../assets/images/brand/logo-white.png" class="header-brand-img desktop-logo"
+            <a class="logo-horizontal" href="#">
+                <img src="{{ asset('assets/images/brand/logo-white.png') }}" class="header-brand-img desktop-logo"
                      alt="logo">
-                <img src="../assets/images/brand/logo-dark.png" class="header-brand-img light-logo1"
+                <img src="{{ asset('assets/images/brand/logo-dark.png') }}" class="header-brand-img light-logo1"
                      alt="logo">
             </a>
             <!-- LOGO -->
@@ -400,7 +400,7 @@
                             <!-- USER OPTIONS ( PROFILE - SIGN OUT ) -->
                             <div class="dropdown d-flex profile-1">
                                 <a href="javascript:void(0)" data-bs-toggle="dropdown" class="nav-link user-dropdown">
-                                    <img src="../assets/images/profiles/5.jpg" alt="profile-user" class="profile-user avatar  cover-image">
+                                    <img src="{{ asset('assets/images/profiles/5.jpg') }}" alt="profile-user" class="profile-user avatar  cover-image">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                                     <div class="drop-heading">

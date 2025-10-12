@@ -36,25 +36,25 @@
             </div></div>
     @endif
 
-    @isset($_GET['id'])
-        @if($_GET['id'] == 1)
-            <div id="toastArea" aria-live="polite" aria-atomic="true" style="position: fixed;top:1rem;right:1rem;z-index: 1080;display: grid;grid-auto-rows:min-content;grid-row-gap:.5rem;">
-                <div class="toast toast-success fade show" id="t_temrlswzdd" role="alert" aria-live="assertive" aria-atomic="true" data-delay="4000" style="display: block;opacity: 1;min-width: 280px;overflow: hidden;border: 0;border-radius: .75rem;box-shadow: 0 8px 24px rgba(0,0,0,.12);">
-                    <div class="toast-header" style="background: linear-gradient(135deg,#28a745,#20c997);color:#fff;border:0;font-weight: 600;display: flex;align-items: center;padding: .25rem .75rem;border-top-left-radius:calc(.25rem - 1px);border-top-right-radius: calc(.25rem - 1px); ">
+{{--    @isset($_GET['id'])--}}
+{{--        @if($_GET['id'] == 1)--}}
+{{--            <div id="toastArea" aria-live="polite" aria-atomic="true" style="position: fixed;top:1rem;right:1rem;z-index: 1080;display: grid;grid-auto-rows:min-content;grid-row-gap:.5rem;">--}}
+{{--                <div class="toast toast-success fade show" id="t_temrlswzdd" role="alert" aria-live="assertive" aria-atomic="true" data-delay="4000" style="display: block;opacity: 1;min-width: 280px;overflow: hidden;border: 0;border-radius: .75rem;box-shadow: 0 8px 24px rgba(0,0,0,.12);">--}}
+{{--                    <div class="toast-header" style="background: linear-gradient(135deg,#28a745,#20c997);color:#fff;border:0;font-weight: 600;display: flex;align-items: center;padding: .25rem .75rem;border-top-left-radius:calc(.25rem - 1px);border-top-right-radius: calc(.25rem - 1px); ">--}}
 
-                        <i class="fas fa-check-circle mr-2" style="font-width: 900;font-family:'Font Awesome 5 Free';display: inline-block;font-style: normal;font-variant: normal;text-rendering: auto;line-height: 1;-webkit-font-smoothing: antialiased;margin-right: .5rem !important;"></i>
-                        <strong class="mr-auto" style="margin-right: auto !important;font-weight: bolder;box-sizing: border-box;"> Sucesso</strong>
-                        <small class="text-light-50"></small>
-                        <button onclick="closeDiv()" type="button" class="ml-2 mb-1 close" data-dismiss="toast" data-bs-dismiss="toast" aria-label="Close" style="margin-bottom: .25rem !important;margin-left:.5rem !important;float:right;font-size: 1.5rem;font-weight: 700;line-height: 1;opacity: .5;text-shadow:0 1px 0 #fff;padding: 0;background-color: transparent;border:0;">
-                            <span aria-hidden="true" style="float:right;font-size: 1.5rem;font-weight: 700;line-height: 1;opacity: .5;text-shadow:0 1px 0 #fff;">×</span>
-                        </button>
-                    </div>
-                    <div class="toast-body" style="padding: .75rem;">Operação concluída com êxito.</div>
-                </div></div>
-        @elseif($_GET['id'] == 2)
-        @else
-        @endif
-    @endisset
+{{--                        <i class="fas fa-check-circle mr-2" style="font-width: 900;font-family:'Font Awesome 5 Free';display: inline-block;font-style: normal;font-variant: normal;text-rendering: auto;line-height: 1;-webkit-font-smoothing: antialiased;margin-right: .5rem !important;"></i>--}}
+{{--                        <strong class="mr-auto" style="margin-right: auto !important;font-weight: bolder;box-sizing: border-box;"> Sucesso</strong>--}}
+{{--                        <small class="text-light-50"></small>--}}
+{{--                        <button onclick="closeDiv()" type="button" class="ml-2 mb-1 close" data-dismiss="toast" data-bs-dismiss="toast" aria-label="Close" style="margin-bottom: .25rem !important;margin-left:.5rem !important;float:right;font-size: 1.5rem;font-weight: 700;line-height: 1;opacity: .5;text-shadow:0 1px 0 #fff;padding: 0;background-color: transparent;border:0;">--}}
+{{--                            <span aria-hidden="true" style="float:right;font-size: 1.5rem;font-weight: 700;line-height: 1;opacity: .5;text-shadow:0 1px 0 #fff;">×</span>--}}
+{{--                        </button>--}}
+{{--                    </div>--}}
+{{--                    <div class="toast-body" style="padding: .75rem;">Operação concluída com êxito.</div>--}}
+{{--                </div></div>--}}
+{{--        @elseif($_GET['id'] == 2)--}}
+{{--        @else--}}
+{{--        @endif--}}
+{{--    @endisset--}}
 
     <!-- { Inout modal Box of Prayers } -->
     <div class="modal fade" id="input-modal">
@@ -68,13 +68,13 @@
                 </div>
                 <form action="{{ route('prayerbox.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
+                    @method('Post')
                 <div class="modal-body">
                         <div class="mb-3">
                             <label for="recipient-name" class="col-form-label">{{ 'Recipiente(s)' }}:</label>
                             <select class="form-select" id="type_prayer" name="type">
                                 <option value="encarnados">Encarnados</option>
                                 <option value="desencarnados">Desencarnados</option>
-
                             </select>
                         </div>
                         <div class="mb-3">

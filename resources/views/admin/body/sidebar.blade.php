@@ -4,14 +4,14 @@
 
         <!-- LOGO -->
         <div class="side-header">
-            <a class="header-brand1" href="index.html">
-                <img src="../assets/images/brand/logo-white.png" class="header-brand-img desktop-logo"
+            <a class="header-brand1" href="{{ '/dashboard' }}">
+                <img src="{{ asset('assets/images/brand/logo-white.png') }}" class="header-brand-img desktop-logo"
                      alt="logo">
-                <img src="../assets/images/brand/icon-dark.png" class="header-brand-img toggle-logo"
+                <img src="{{ asset('assets/images/brand/icon-dark.png') }}" class="header-brand-img toggle-logo"
                      alt="logo">
-                <img src="../assets/images/brand/icon-dark.png" class="header-brand-img light-logo"
+                <img src="{{ asset('assets/images/brand/icon-dark.png') }}" class="header-brand-img light-logo"
                      alt="logo">
-                <img src="../assets/images/brand/logo-dark.png" class="header-brand-img light-logo1"
+                <img src="{{ asset('assets/images/brand/logo-dark.png') }}" class="header-brand-img light-logo1"
                      alt="logo">
             </a>
             <!-- LOGO -->
@@ -131,7 +131,7 @@
 {{--                --}}
                 <li class="slide">
                     <a class="sidenav-menu-item" data-bs-toggle="slide" href="javascript:void(0)"><i
-                            class="side-menu__icon fe fe-shopping-cart"></i><span
+                            class="side-menu__icon fe fe-book-open"></i><span
                             class="side-menu__label">LFL Library</span><i
                             class="angle fe fe-chevron-right"></i>
                     </a>
@@ -167,34 +167,29 @@
                         </li>
                     </ul>
                 </li>
-{{--                <li class="slide">--}}
-{{--                    <a class="sidenav-menu-item" data-bs-toggle="slide" href="javascript:void(0)"><i--}}
-{{--                            class="side-menu__icon fe fe-lock"></i><span--}}
-{{--                            class="side-menu__label">Authentication</span><i--}}
-{{--                            class="angle fe fe-chevron-right"></i>--}}
-{{--                    </a>--}}
-{{--                    <ul class="slide-menu">--}}
-{{--                        <li class="panel sidetab-menu">--}}
-{{--                            <div class="panel-body tabs-menu-body p-0 border-0">--}}
-{{--                                <div class="tab-content">--}}
-{{--                                    <div class="tab-pane active" id="side1">--}}
-{{--                                        <ul class="sidemenu-list">--}}
-{{--                                            <li class="side-menu-label1"><a--}}
-{{--                                                    href="javascript:void(0)">Authentication</a></li>--}}
-{{--                                            <li><a class="slide-item" href="authentication-signin.html">Sign--}}
-{{--                                                    up</a></li>--}}
-{{--                                            <li><a class="slide-item" href="register.html">Sign in</a></li>--}}
-{{--                                            <li><a class="slide-item" href="forgot-password.html"> Forgot--}}
-{{--                                                    Password </a></li>--}}
-{{--                                            <li><a class="slide-item" href="lockscreen.html">Lock Screen</a>--}}
-{{--                                            </li>--}}
-{{--                                        </ul>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
+                <li class="slide">
+                    <a class="sidenav-menu-item" data-bs-toggle="slide" href="javascript:void(0)"><i
+                            class="side-menu__icon fe bi-file-check"></i><span
+                            class="side-menu__label">Prayer Box</span><i
+                            class="angle fe fe-chevron-right"></i>
+                    </a>
+                    <ul class="slide-menu">
+                        <li class="panel sidetab-menu">
+                            <div class="panel-body tabs-menu-body p-0 border-0">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="side1">
+                                        <ul class="sidemenu-list">
+                                            <li class="side-menu-label1"><a
+                                                    href="javascript:void(0)">Prayer Box</a></li>
+                                            <li><a class="slide-item" href="{{ route('prayerbox.index') }}">List Prayer Box</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
 {{--                <li class="slide">--}}
 {{--                    <a class="sidenav-menu-item" data-bs-toggle="slide" href="javascript:void(0)"><i--}}
 {{--                            class="side-menu__icon fe fe-alert-triangle"></i><span--}}
