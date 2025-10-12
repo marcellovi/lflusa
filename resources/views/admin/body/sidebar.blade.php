@@ -4,7 +4,7 @@
 
         <!-- LOGO -->
         <div class="side-header">
-            <a class="header-brand1" href="index.html">
+            <a class="header-brand1" href="{{ '/dashboard' }}">
                 <img src="{{ asset('assets/images/brand/logo-white.png') }}" class="header-brand-img desktop-logo"
                      alt="logo">
                 <img src="{{ asset('assets/images/brand/icon-dark.png') }}" class="header-brand-img toggle-logo"

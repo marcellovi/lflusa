@@ -14,7 +14,7 @@
                 </svg>
             </a>
             <!-- sidebar-toggle-->
-            <a class="logo-horizontal " href="index.html">
+            <a class="logo-horizontal" href="#">
                 <img src="{{ asset('assets/images/brand/logo-white.png') }}" class="header-brand-img desktop-logo"
                      alt="logo">
                 <img src="{{ asset('assets/images/brand/logo-dark.png') }}" class="header-brand-img light-logo1"
