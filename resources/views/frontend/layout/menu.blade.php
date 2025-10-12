@@ -81,7 +81,7 @@
                     <a class="nav-link click-scroll" href="#" data-bs-toggle="modal" data-bs-target="#input-modal" data-bs-whatever="@mdo">{{ trans('messages.prayer_box') }}</a>
                 </li>
                 <li class="nav-item ms-3">
-                    <a class="nav-link custom-btn custom-border-btn btn" href="/soon">{{ trans('messages.donate') }}</a>
+                    <a class="nav-link custom-btn custom-border-btn btn" href="https://www.paypal.com/donate/?hosted_button_id=PQQB5SV8MATTS" target="_blank">{{ trans('messages.donate') }}</a>
                 </li>
 
             </ul>
