@@ -25,7 +25,7 @@ class BookController extends Controller
                     ->join('languages', 'books.language_id', '=', "languages.id")
                     //->join('spirits', 'books.spirit_id', '=', "spirits.id")
                     ->select('books.id as book_id','title','type','edition','price','copies','condition','status',
-                    'languages.name as language','publishers.name as publisher',
+                    'languages.name as language','publishers.name as publisher','cover_image',
                         DB::raw("GROUP_CONCAT(authors.name ORDER BY authors.name SEPARATOR ', ')  as author"))
                     ->groupBy('books.id','title','type','edition','price','copies','condition','status','language','publisher')
                     ->get();
@@ -39,27 +39,30 @@ class BookController extends Controller
         $publishers = Publisher::all();
         return view('pages._admin.library.create', compact('authors','languages','books_type','publishers'));
     }
-    public function edit($id){
+    public function edit(Request $request,$id){
 
-        $books = DB::table("books")
+        $book = DB::table("books")
             ->join('books_authors','books.id','=','books_authors.book_id')
             ->join("authors", "books_authors.author_id", "=", "authors.id")
             ->join("publishers", "books.publisher_id", "=", "publishers.id")
             ->join('languages', 'books.language_id', '=', "languages.id")
             //->join('spirits', 'books.spirit_id', '=', "spirits.id")
             ->select('books.id as book_id','title','type','edition','price','copies','condition','status',
-                'languages.name as language','publishers.name as publisher',
+                'publishers.name as publisher','books.language_id','books.description','publisher_id','published',
+                'cover_image',
                 DB::raw("GROUP_CONCAT(authors.name ORDER BY authors.name SEPARATOR ', ')  as author"))
             ->where('books.id', '=', $id)
             ->groupBy('books.id')
             ->first();
 
+        $authors_books = DB::table("books_authors")->where('book_id', '=', $id)->pluck('author_id','id')->toArray();
+
         $authors = Author::all();
-        $languages = Language::where('active', 1)->get();
+        $languages = Language::where('active', 1)->select('id','name')->get();
         $books_type = Book::distinct('type')->pluck('type');
         $publishers = Publisher::all();
 
-        return view('pages._admin.library.edit', compact('authors'));
+        return view('pages._admin.library.edit', compact('authors','languages','books_type','publishers','book','authors_books'));
     }
 
     public function store(Request $request){
@@ -110,25 +113,87 @@ class BookController extends Controller
         }
     }
 
-//    public function update(Request $request, $id)
-//    {
-//        $request->validate([
-//            'title' => 'required|max:255',
-//            'body' => 'required',
-//        ]);
-//        $post = Post::find($id);
-//        $post->update($request->all());
-//        return redirect()->route('posts.index')
-//            ->with('success', 'Post updated successfully.');
-//    }
+    public function update(Request $request)
+    {
+        $book = Book::find($request->get('id'));
 
-//    public function destroy($id)
-//    {
-//        $post = Post::find($id);
-//        $post->delete();
-//        return redirect()->route('posts.index')
-//            ->with('success', 'Post deleted successfully');
-//    }
+        if(empty($book)){
+            return redirect()->back()->with('error', 'Book not found!');
+        }
+
+        $request->validate([
+            'title' => 'required|string|min:5|max:200',
+            'copies' => 'required|integer|min:1|max:149',
+            'file' => [
+                'file',
+                'image',
+                'max:200', // 200KB = 200 * 1024 bytes
+                function ($attribute, $value, $fail) use ($request) {
+                    if ($request->hasFile('file')) {
+                        $originalFilename = str_replace(' ','_',$request->file('file')->getClientOriginalName());
+
+                        if (!Storage::disk('public')->exists('images/books/' . $originalFilename)) {
+                            $file = $request->file('file');
+
+                            // Store the file in 'public/images/books' with its original name
+                            $path = $file->storeAs('public/images/books', $originalFilename);
+                            $request['cover_image'] = $originalFilename; // only save the name in the DB
+                        }else{
+                            $request['cover_image'] = $originalFilename;
+                        }
+                    }
+                },
+            ],
+        ]);
+
+        if($request->get('action_type') === 'draft'){
+            $request['status'] = 0;  // inactive - draft
+            $book= Book::save($request->all());  // check this//
+
+            foreach ($request->get('authors') as $author_id) {
+                DB::table('books_authors')->insert(['book_id' => $book->id, 'author_id' => $author_id,'created_at' => now()]);
+            }
+            return redirect()->back()->with('success', 'Draft saved successfully!');
+
+        }else if($request->get('action_type') === 'edit'){
+            $book= Book::update($request->all());
+            foreach ($request->get('authors') as $author_id) {
+                DB::table('books_authors')->insert(['book_id' => $request->get('id'), 'author_id' => $author_id,'created_at' => now()]);
+            }
+            return redirect()->back()->with('success', 'Book saved successfully!');
+
+        }else{
+            return redirect()->back()->with('error', 'Ops...Something went wrong! Try again some other time.');
+        }
+    }
+
+    public function destroy($id)
+    {
+        try {
+            DB::transaction(function () use ($id) {
+                $book = Book::find($id);
+
+                if (!empty($book->cover_image)) {
+                    //check if image exist in other record
+                    $cover_image = Book::where("cover_image", $book->cover_image)->count();
+
+                    if ($cover_image = 1) {
+                        // not used by other record
+                        Storage::disk('public')->delete('images/books/' . $book->cover_image);
+                    }
+                }
+
+                $book->delete();
+                DB::table("books_authors")->where('book_id', '=', $id)->delete();
+
+
+            });
+            return redirect()->route('books.index')
+                ->with('success', 'Book deleted successfully.');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'An error occurred: ' . $e->getMessage());
+        }
+    }
 
 //    public function show($id)
 //    {

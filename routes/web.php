@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\PrayerBoxController;
@@ -72,6 +73,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/prayerbox/', [PrayerBoxController::class, 'index'])->name('prayerbox.index');
     Route::get('/admin/prayerbox/print', [PrayerBoxController::class, 'print'])->name('prayerbox.print');
 
+    /** CALENDAR  */
+    Route::get('/admin/calendar',[CalendarController::class,'index'])->name('calendar.index');
+    Route::get('/admin/calendar/create', [CalendarController::class, 'create'])->name('calendar.create');
+    Route::post('/admin/calendar/store', [CalendarController::class, 'store'])->name('calendar.store');
+    Route::get('/admin/calendar/{id}/edit', [CalendarController::class, 'edit'])->name('calendar.edit');
+    Route::put('/admin/calendar/update', [CalendarController::class, 'update'])->name('calendar.update');
+    Route::get('/admin/calendar/{id}', [CalendarController::class .'destroy'])->name('calendar.destroy');
+
+
 });
 
 Route::get('/dashboard', function () {
@@ -93,43 +103,13 @@ Route::post('/admin/library/store', [BookController::class, 'store'])->name('boo
 // Route::get('/admin/library/show/{id}', [BookController::class, 'edit'])->name('books.show');
 
 //Route::post('/admin/library/destroy', [BookController::class, 'destroy'])->name('books.destroy');
-Route::post('/admin/library/update', [BookController::class, 'update'])->name('books.update');
+Route::put('/admin/library/update', [BookController::class, 'update'])->name('books.update');
 
-Route::delete('/admin/library/{id}', BookController::class .'@destroy')->name('books.destroy');
-
-//// returns the home page with all posts
-//Route::get('/', PostController::class .'@index')->name('posts.index');
-//// returns the form for adding a post
-//Route::get('/posts/create', PostController::class . '@create')->name('posts.create');
-//// adds a post to the database
-//Route::post('/posts', PostController::class .'@store')->name('posts.store');
-//// returns a page that shows a full post
-//Route::get('/posts/{post}', PostController::class .'@show')->name('posts.show');
-//// returns the form for editing a post
-//Route::get('/posts/{post}/edit', PostController::class .'@edit')->name('posts.edit');
-//// updates a post
-//Route::put('/posts/{post}', PostController::class .'@update')->name('posts.update');
-//// deletes a post
-//Route::delete('/posts/{post}', PostController::class .'@destroy')->name('posts.destroy');
+Route::get('/admin/library/{id}', BookController::class .'@destroy')->name('books.destroy');
 
 
 
 
-
-
-
-//Route::get('/library', function() {
-//    return view('frontend/library');
-//});
-
-//
-
-
-
-
-//Route::get('/welcome', function () {
-//    return view('welcome');
-//});
 
 
 Route::get('/library2', function() {

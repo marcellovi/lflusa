@@ -184,6 +184,9 @@
                                         <button class="btn btn-sm btn-icon">
                                             <a href="{{route('books.edit',$book->book_id)}}"><i
                                                 class="bx bx-edit"></i></a></button>
+                                        <button class="btn btn-sm btn-icon">
+                                            <a href="{{route('books.destroy',$book->book_id)}}"><i
+                                                    class="bx bx-trash"></i></a></button>
                                         <button
                                             class="btn btn-sm btn-icon dropdown-toggle hide-arrow"
                                             data-bs-toggle="dropdown">

@@ -167,6 +167,7 @@
                         </li>
                     </ul>
                 </li>
+                <!-- Prayer Box -->
                 <li class="slide">
                     <a class="sidenav-menu-item" data-bs-toggle="slide" href="javascript:void(0)"><i
                             class="side-menu__icon fe bi-file-check"></i><span
@@ -182,6 +183,32 @@
                                             <li class="side-menu-label1"><a
                                                     href="javascript:void(0)">Prayer Box</a></li>
                                             <li><a class="slide-item" href="{{ route('prayerbox.index') }}">List Prayer Box</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Calendar -->
+                <li class="slide">
+                    <a class="sidenav-menu-item" data-bs-toggle="slide" href="javascript:void(0)"><i
+                            class="side-menu__icon fe bi-calendar"></i><span
+                            class="side-menu__label">Calendar</span><i
+                            class="angle fe fe-chevron-right"></i>
+                    </a>
+                    <ul class="slide-menu">
+                        <li class="panel sidetab-menu">
+                            <div class="panel-body tabs-menu-body p-0 border-0">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="side1">
+                                        <ul class="sidemenu-list">
+                                            <li class="side-menu-label1"><a
+                                                    href="javascript:void(0)">Calendar</a></li>
+                                            <li><a class="slide-item" href="{{ route('calendar.index') }}">List Events</a>
+                                            </li>
+                                            <li><a class="slide-item" href="{{ route('calendar.create') }}">Add Events</a>
                                             </li>
                                         </ul>
                                     </div>
