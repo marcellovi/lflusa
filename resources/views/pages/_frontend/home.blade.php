@@ -108,25 +108,20 @@
         <div class="container">
             <div class="row">
 
+                <!-- Future Event -->
                 <div class="col-lg-12 col-12 mb-5">
                     <h2>{{ trans('messages.home_future_events') }}</h2>
                 </div>
 
+                @isset($futureEvents[0]->id)
                 <div class="col-lg-6 col-12">
                     <div class="news-block">
                         <div class="news-block-top">
-                            <a href="#">
+                            <a href="{{ route('event.detail',$futureEvents[0]->id) }}">
                                 <img
-                                    src="{{ asset('assets/images/news/blood-drive.jpg') }}"
+                                    src="{{ !empty($futureEvents[0]->image) ? asset('storage/images/events/'.$futureEvents[0]->image) : asset('assets/images/no-image-sq.jpg')  }}"
                                     class="news-image img-fluid" alt="">
                             </a>
-
-{{--                            <div class="news-category-block">--}}
-                                <div class="news-category">
-                                <a href="#" class="category-block-link">
-{{--                                   Blood Drive--}}
-                                </a>
-                            </div>
                         </div>
 
                         <div class="news-block-info">
@@ -134,7 +129,7 @@
                                 <div class="news-block-date">
                                     <p>
                                         <i class="bi-calendar4 custom-icon me-1"></i>
-                                        October 05, 2025
+                                        {{ date('F j, Y', strtotime($futureEvents[0]->start)) }}
                                     </p>
                                 </div>
 
@@ -144,145 +139,172 @@
                                         By LFL USA
                                     </p>
                                 </div>
-                                <!--
-                                <div class="news-block-comment">
-                                    <p>
-                                        <i class="bi-chat-left custom-icon me-1"></i>
-                                        32 Comments
-                                    </p>
-                                </div> -->
                             </div>
 
                             <div class="news-block-title mb-2">
-                                <h4><a href="#" class="news-block-title-link">Blood Drive this October 5</a></h4>
+                                <h4><a href="{{ route('event.detail',$futureEvents[0]->id) }}" class="news-block-title-link">{{ $futureEvents[0]->title }}</a></h4>
                             </div>
 
                             <div class="news-block-body">
-                                <p>Be part of the blood drive this October 5 by the LFL - USA.</p>
+                                <p> {!! substr(strip_tags($futureEvents[0]->description),0,100) !!}
+                                    {{ (strlen(strip_tags($futureEvents[0]->description)) > 100) ? '...' : '' }}</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                @else
+                    <div class="col-lg-6 col-12">
+                        <div class="news-block">
+                            <div class="news-block-top">
+                                <a href="#">
+                                    <img src="{{ asset('assets/images/no-image-sq.jpg')}}" class="news-image img-fluid" alt="">
+                                </a>
+                            </div>
+
+                            <div class="news-block-info">
+                                <div class="d-flex mt-2">
+                                    <div class="news-block-date">
+                                        <p>
+                                            <i class="bi-calendar4 custom-icon me-1"></i>
+                                            {{ 'Soon will have more LFL Events!' }}
+                                        </p>
+                                    </div>
+
+                                    <div class="news-block-author mx-5">
+                                        <p>
+                                            <i class="bi-person custom-icon me-1"></i>
+                                            By LFL USA
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="news-block-title mb-2">
+                                    <h4><a href="#" class="news-block-title-link">{{ 'No Current Events' }}</a></h4>
+                                </div>
+
+                                <div class="news-block-body">
+                                    <p> {{ 'Soon we will have more LFL Events!' }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endisset
                 <div class="col-lg-6 col-12 mx-auto">
-{{--                    <form class="custom-form search-form" action="#" method="post" role="form">--}}
-{{--                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">--}}
+                <!-- End Future Event -->
 
-{{--                        <button type="submit" class="form-control">--}}
-{{--                            <i class="bi-search"></i>--}}
-{{--                        </button>--}}
-{{--                    </form>--}}
-
+                    <!-- Next Future Events -->
                     <h5 class="mb-3">{{ trans('messages.home_more_events') }}</h5>
 
-                    <div class="news-block news-block-two-col d-flex mt-4">
-                        <div class="news-block-two-col-image-wrap">
-                            <a href="#">
-                                <img src="{{ asset('assets/images/news/fraternity-on-streets.jpg') }}"
-                                     class="news-image img-fluid" alt="">
-                            </a>
-                        </div>
-
-                        <div class="news-block-two-col-info">
-                            <div class="news-block-title mb-2">
-                                <h6><a href="#" class="news-block-title-link">Fraternity on the streets</a>
-                                </h6>
+                    @for($i = 1; $i <= 2; $i++)
+                        @isset($futureEvents[$i])
+                        <div class="news-block news-block-two-col d-flex mt-4">
+                            <div class="news-block-two-col-image-wrap">
+                                <a href="{{ route('event.detail',$futureEvents[1]->id) }}">
+                                    <img  src="{{ !empty($futureEvents[1]->image) ? asset('storage/images/events/'.$futureEvents[1]->image) : asset('assets/images/no-image-sq.jpg')  }}"
+                                          class="news-image img-fluid" alt="">
+                                </a>
                             </div>
 
-                            <div class="news-block-date">
-                                <p>
-                                    <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 18, 2025
-                                </p>
+                            <div class="news-block-two-col-info">
+                                <div class="news-block-title mb-2">
+                                    <h6><a href="{{ route('event.detail',$futureEvents[1]->id) }}" class="news-block-title-link">{{ $futureEvents[1]->title }}</a>
+                                    </h6>
+                                </div>
+
+                                <div class="news-block-date">
+                                    <p>
+                                        <i class="bi-calendar4 custom-icon me-1"></i>
+                                        {{ date('F j, Y', strtotime($futureEvents[1]->start)) }}
+                                        <br>
+                                        {!! substr(strip_tags($futureEvents[1]->description),0,40) !!}
+                                        {{ (strlen(strip_tags($futureEvents[1]->description)) > 40) ? '...' : '' }}
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        @else
+                            <div class="news-block news-block-two-col d-flex mt-4">
+                                <div class="news-block-two-col-image-wrap">
+                                    <a href="#">
+                                        <img  src="{{ asset('assets/images/no-image-sq.jpg')  }}"
+                                              class="news-image img-fluid" alt="">
+                                    </a>
+                                </div>
+                                <div class="news-block-two-col-info">
+                                    <div class="news-block-title mb-2">
+                                        <h6><a href="#" class="news-block-title-link">{{ 'Future Events Coming Soon' }}</a>
+                                        </h6>
+                                    </div>
 
-                    <div class="news-block news-block-two-col d-flex mt-4">
-                        <div class="news-block-two-col-image-wrap">
-                            <a href="#">
-                                <img src="{{ asset('assets/images/news/The Chose Site Tour.png') }}"
-                                     class="news-image img-fluid" alt="">
-                            </a>
-                        </div>
-
-                        <div class="news-block-two-col-info">
-                            <div class="news-block-title mb-2">
-                                <h6><a href="#" class="news-block-title-link">The chosen site tour</a>
-                                </h6>
+                                    <div class="news-block-date">
+                                        <p>
+                                            <i class="bi-calendar4 custom-icon me-1"></i>
+                                            {{ 'No Dates for Future Events Yet!' }}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
+                        @endisset
+                    @endfor
 
-                            <div class="news-block-date">
-                                <p>
-                                    <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 24 - 25, 2025
-                                    <br>
-                                    <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 31 - Nov. 1, 2025
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h5 class="mt-5 mb-3">{{ trans('messages.home_past_events') }}</h5>
-
-                    <div class="news-block news-block-two-col d-flex mt-4">
-                        <div class="news-block-two-col-image-wrap">
-                            <a href="#">
-                                <img src="{{ asset('assets/images/news/blood-drive-pic2.jpg') }}"
-                                     class="news-image img-fluid" alt="">
-                            </a>
-                        </div>
-
-                        <div class="news-block-two-col-info">
-                            <div class="news-block-title mb-2">
-                                <h6><a href="#" class="news-block-title-link">LFL Blood Drive</a>
-                                </h6>
-                            </div>
-
-                            <div class="news-block-date">
-                                <p>
-                                    <i class="bi-calendar4 custom-icon me-1"></i>
-                                    June 15, 2025
-                                </p>
-                            </div>
-                        </div>
-                    </div>
 
 {{--                    <div class="news-block news-block-two-col d-flex mt-4">--}}
 {{--                        <div class="news-block-two-col-image-wrap">--}}
-{{--                            <a href="#">--}}
-{{--                                <img src="{{ asset('assets/images/news/blood-drive-pic2.jpg') }}"--}}
+{{--                            <a href="{{ route('event.detail',$futureEvents[2]->id) }}">--}}
+{{--                                <img  src="{{ !empty($futureEvents[2]->image) ? asset('storage/images/events/'.$futureEvents[2]->image) : asset('assets/images/no-image-sq.jpg')  }}"--}}
 {{--                                     class="news-image img-fluid" alt="">--}}
 {{--                            </a>--}}
 {{--                        </div>--}}
 
 {{--                        <div class="news-block-two-col-info">--}}
 {{--                            <div class="news-block-title mb-2">--}}
-{{--                                <h6><a href="#" class="news-block-title-link">Kids meal DYI meal bags</a>--}}
+{{--                                <h6><a href="{{ route('event.detail',$futureEvents[2]->id) }}" class="news-block-title-link">{{ $futureEvents[2]->title }}</a>--}}
 {{--                                </h6>--}}
 {{--                            </div>--}}
 
 {{--                            <div class="news-block-date">--}}
 {{--                                <p>--}}
 {{--                                    <i class="bi-calendar4 custom-icon me-1"></i>--}}
-{{--                                    October 24, 2025--}}
+{{--                                    {{ date('F j, Y', strtotime($futureEvents[2]->start)) }}--}}
+{{--                                    <br>--}}
+{{--                                    {!! substr(strip_tags($futureEvents[2]->description),0,40) !!}--}}
+{{--                                    {{ (strlen(strip_tags($futureEvents[2]->description)) > 40) ? '...' : '' }}--}}
+{{--                                    <i class="bi-calendar4 custom-icon me-1"></i>--}}
+{{--                                    October 31 - Nov. 1, 2025--}}
 {{--                                </p>--}}
 {{--                            </div>--}}
 {{--                        </div>--}}
 {{--                    </div>--}}
+                    <!-- End of Next Future Events -->
 
-{{--                    <form class="custom-form subscribe-form" action="#" method="post" role="form">--}}
-{{--                        <h5 class="mb-4">Caixa de Oração</h5>--}}
+                    <!-- Past Event -->
+                    <h5 class="mt-5 mb-3">{{ trans('messages.home_past_events') }}</h5>
+                    <div class="news-block news-block-two-col d-flex mt-4">
+                        <div class="news-block-two-col-image-wrap">
+                            <a href="{{ route('event.detail',$pastEvents->id) }}">
+                                <img src="{{ !empty($pastEvents->image) ? asset('storage/images/events/'.$pastEvents->image) : asset('assets/images/no-image-sq.jpg')  }}"
+                                     class="news-image img-fluid" alt="">
+                            </a>
+                        </div>
 
-{{--                        <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*"--}}
-{{--                               class="form-control" placeholder="Ex: John Paul,Maria Blake,Rick Vi" required>--}}
+                        <div class="news-block-two-col-info">
+                            <div class="news-block-title mb-2">
+                                <h6><a href="{{ route('event.detail',$pastEvents->id) }}" class="news-block-title-link">{{ $pastEvents->title }}</a>
+                                </h6>
+                            </div>
 
-{{--                        <div class="col-lg-12 col-12 text-center">--}}
-{{--                            <!-- <button type="submit" class="btn btn-primary form-control">Encarnados</button> -->--}}
-{{--                            <button type="button" class="btn btn-primary me-4">Encarnados</button>--}}
-{{--                            <button type="button" class="btn btn-outline-secondary">Desencarnados</button>--}}
-{{--                        </div>--}}
-{{--                    </form>--}}
+                            <div class="news-block-date">
+                                <p>
+                                    <i class="bi-calendar4 custom-icon me-1"></i>
+                                    {{ date('F j, Y', strtotime($pastEvents->start)) }}
+                                    <br>
+                                    {!! substr(strip_tags($pastEvents->description),0,40) !!}
+                                    {{ (strlen(strip_tags($pastEvents->description)) > 40) ? '...' : '' }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Past Event -->
                 </div>
 
             </div>

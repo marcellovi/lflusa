@@ -11,5 +11,9 @@ class Calendar extends Model
 
     protected $table = 'calendars';
 
-    protected $fillable = [ "title","start", "end" ];
+    protected $fillable = [
+        'title',
+        'start',
+        'end',
+    ];
 }

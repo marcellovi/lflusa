@@ -6,17 +6,8 @@
 
 @section('content')
 
-    @if (session('success'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert" id="alert-message">
-            <strong>Success!</strong> {{ session('success') }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
-        </div>
-    @elseif(session('error'))
-        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="alert-message">
-            <strong>Error!</strong> {{ session('error') }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i class="bi bi-x"></i></button>
-        </div>
-    @endif
+    <!-- includes alert msg -->
+    @include('includes.widgets.alertmsg')
 
     <form action="{{ route('books.store') }}" id="formLibrary" method="post" enctype="multipart/form-data">
         @csrf
@@ -187,17 +178,4 @@
     </div>
     </form>
 @endsection
-@section('scripts')
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const alertMessage = document.getElementById('alert-message');
-            if (alertMessage) {
-                setTimeout(() => {
-                    alertMessage.style.display = 'none'; // Or alertMessage.remove(); to remove from DOM
-                }, 4000); // 4000 milliseconds = 4 seconds
-            }
-        });
-    </script>
 
-
-@endsection

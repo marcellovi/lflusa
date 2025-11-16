@@ -4,11 +4,14 @@
 @section('breadcrumb-item','Calendar - Events')
 @section('content')
 
+    <!-- includes alert msg -->
+    @include('includes.widgets.alertmsg')
+
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-header d-flex justify-content-end">
-                    <h3 class="card-title"><a href="{{ route('prayerbox.print') }}" target="_blank" class="btn btn-outline-secondary">Imprimir</a></h3>
+                    <h3 class="card-title"><a href="{{ route('calendar.create') }}" class="btn btn-outline-secondary">Add Event</a></h3>
                </div>
                 <div class="card-body">
 {{--                    <div--}}
@@ -39,6 +42,8 @@
                                 <th>Title</th>
                                 <th>Start Dt.</th>
                                 <th>End Dt.</th>
+                                <th>Color</th>
+                                <th>URL</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>
@@ -59,12 +64,16 @@
                                         </div>
                                     </td>
                                     <td>@isset($event->end) {{  $event->end  }}@endisset</td>
+                                    <td><input type="color" id="html5colorpicker" onchange="clickColor(0, -1, -1, 5)" value="{{  $event->color  }}" style="width:85%;" readonly="readonly" disabled="true" >
+
+                                    </td>
+                                    <td><a href="{{  $event->url  }}" target="_blank" >{{ $event->url }}</a> </td>
                                     <td width="20px">
                                         <button class="btn btn-sm btn-icon">
-                                            <a href="{{route('books.edit',$event->id)}}"><i
+                                            <a href="{{route('calendar.edit',$event->id)}}"><i
                                                     class="bx bx-edit"></i></a></button>
                                         <button class="btn btn-sm btn-icon">
-                                            <a href="{{route('books.destroy',$event->id)}}"><i
+                                            <a href="{{route('calendar.destroy',$event->id)}}"><i
                                                     class="bx bx-trash"></i></a></button></td>
                                 </tr>
                             @endforeach

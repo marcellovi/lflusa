@@ -17,10 +17,10 @@
 <script src="{{ asset('assets/js/plugins/sidebar/sidebar.js') }}"></script>
 <!-- Perfect SCROLLBAR JS-->
 <script src="{{ asset('assets/js/plugins/p-scroll/perfect-scrollbar.js') }}"></script>
-<script src="{{ asset('assets/js/plugins/p-scroll/pscroll.js') }}"></script>
+{{--<script src="{{ asset('assets/js/plugins/p-scroll/pscroll.js') }}"></script>--}}
 <script src="{{ asset('assets/js/plugins/p-scroll/pscroll-1.js') }}"></script>
 <!--{ INTERNAL CHARTJS CHART JS }-->
-<script src="{{ asset('assets/js/plugins/chart/Chart.bundle.js') }}"></script>
+{{--<script src="{{ asset('assets/js/plugins/chart/Chart.bundle.js') }}"></script>--}}
 <script src="{{ asset('assets/js/plugins/chart/utils.js') }}"></script>
 <!--{ Select2 js }-->
 <script src="{{ asset('assets/js/plugins/select2/select2.full.min.js') }}"></script>
@@ -32,7 +32,7 @@
 <script src="{{ asset('assets/js/plugins/datatable/dataTables.bootstrap5.min.js') }}"></script>
 <script src="{{ asset('assets/js/ecommerce-product-list.js') }}"></script>
 <!--{ INTERNAL APEXCHART JS }-->
-<script src="{{ asset('assets/js/apexcharts.js') }}"></script>
+{{--<script src="{{ asset('assets/js/apexcharts.js') }}"></script>--}}
 <script src="{{ asset('assets/js/plugins/apexchart/irregular-data-series.js') }}"></script>
 <script src="{{ asset('assets/js/plugins/flot/jquery.flot.js') }}"></script>
 <script src="{{ asset('assets/js/plugins/flot/jquery.flot.fillbetween.js') }}"></script>
@@ -48,6 +48,7 @@
 <script src="{{ asset('assets/js/summernote.js') }}"></script>
 <script src="{{ asset('assets/js/plugins/dropzone/dropzone.js') }}"></script>
 <!-- DATEPICKER JS -->
+<script src="{{ asset('assets/js/plugins/flatpickr/flatpickr.min.js') }}"></script>
 <script src="{{ asset('assets/js/plugins/date-picker/date-picker.js') }}"></script>
 <script src="{{ asset('assets/js/plugins/date-picker/jquery-ui.js') }}"></script>
 <!-- { page js } -->
@@ -60,3 +61,14 @@
 <script src="{{ asset('assets/js/custom-swicher.js') }}"></script>
 <!--{ Switcher js }-->
 <script src="{{ asset('assets/switcher/js/switcher.js') }}"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const alertMessage = document.getElementById('alert-message');
+        if (alertMessage) {
+            setTimeout(() => {
+                alertMessage.style.display = 'none'; // Or alertMessage.remove(); to remove from DOM
+            }, 4000); // 4000 milliseconds = 4 seconds
+        }
+    });
+</script>
