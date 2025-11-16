@@ -103,6 +103,8 @@ class BookController extends Controller
 
         }else if($request->get('action_type') === 'save'){
             $book= Book::create($request->all());
+
+            $request['authors'] = is_array($request->get('authors')) ? $request->get('authors') : [$request->get('authors')];
             foreach ($request->get('authors') as $author_id) {
                 DB::table('books_authors')->insert(['book_id' => $book->id, 'author_id' => $author_id,'created_at' => now()]);
             }
