@@ -91,7 +91,7 @@ class CalendarController extends Controller
                             $file = $request->file('file');
 
                             // Store the file in 'public/images/books' with its original name
-                            $path = $file->storeAs('public/images/events', $originalFilename);
+                            $path = $file->storeAs('images/events', $originalFilename);
                             $request['image'] = $originalFilename; // only save the name in the DB
                         }
                     }
