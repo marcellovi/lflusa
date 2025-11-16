@@ -17,7 +17,7 @@
         @method('post')
     <div class="row">
         <div class="col-12">
-            <!-- { Book Information } start -->
+            <!-- { Event Information } start -->
             <div class="card mb-4">
                 <div class="card-header">
                     <h5 class="card-tile mb-0">Event information</h5>
@@ -26,8 +26,8 @@
                     <div class="mb-3">
                         <label class="form-label" for="ecommerce-product-name">Title</label>
                         <input type="text" class="form-control  @error('title') is-invalid @enderror" id="title"
-                               placeholder="Book title" name="title"
-                               aria-label="Book title" value="{{ old('title') }}" required>
+                               placeholder="Event title" name="title"
+                               aria-label="Event title" value="{{ old('title') }}" required>
                         @error('title')
                         <div class="text-danger">* {{ $message }}</div>
                         @enderror

@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-12 mb-5" style="text-align: center">
-                    <h2>LFL - Library</h2>
+                    <h2>LFL - Events</h2>
                 </div>
                 <div class="col-lg-6 col-12">
                     <div class="news-block">
